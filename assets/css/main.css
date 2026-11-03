@@ -267,3 +267,7 @@ h1,h2,h3,p{margin:0}
   .facts{grid-template-columns:1fr 2fr}
 }
 @media (max-width:640px){.br-desk{display:none}}
+
+/* project cards: link names never break, "Read the case study" lines up at the bottom of each row */
+.project-meta .live{white-space:nowrap}
+.project-link{margin-top:auto;align-self:flex-start}
