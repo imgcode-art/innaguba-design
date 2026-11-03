@@ -29,3 +29,20 @@ if (/[?&]theme=warm\b/.test(location.search)) document.documentElement.setAttrib
   }, { rootMargin: '0px 0px -12% 0px', threshold: 0.15 });
   items.forEach(function (el) { io.observe(el); });
 })();
+
+// Headline: the last word slowly changes (properly, with care, with heart, honestly).
+// Skipped for people who prefer reduced motion; screen readers get the full sentence from aria-label.
+(function () {
+  var el = document.querySelector('.rotator');
+  if (!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var words = el.getAttribute('data-words').split('|');
+  var i = 0;
+  setInterval(function () {
+    el.classList.add('is-out');
+    setTimeout(function () {
+      i = (i + 1) % words.length;
+      el.textContent = words[i];
+      el.classList.remove('is-out');
+    }, 450);
+  }, 3200);
+})();

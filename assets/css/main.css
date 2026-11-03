@@ -93,6 +93,10 @@ h1,h2,h3,p{margin:0}
 .seal-heart{position:absolute;left:38%;top:38%;width:24%;height:24%;fill:none;stroke:var(--walnut);stroke-width:1.1;stroke-linejoin:round;overflow:visible}
 @keyframes seal-spin{to{transform:rotate(360deg)}}
 
+/* Rotating last word of the headline */
+.rotator{display:inline-block;transition:opacity .45s ease,transform .45s cubic-bezier(.2,.7,.2,1)}
+.rotator.is-out{opacity:0;transform:translateY(.25em)}
+
 /* Work */
 .work-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px}
 .project{display:flex;flex-direction:column;gap:16px;text-decoration:none;color:inherit}
