@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>innaguba.com case study — Inna Guba Design</title>
+<meta name="description" content="A research-led redesign for a family photographer: interviews, survey, usability testing, and the decision to replace a booking calendar with a conversation.">
+<meta property="og:title" content="From a pretty portfolio to a website that books families">
+<meta property="og:image" content="../assets/img/innaguba/home-desktop.webp">
+<meta name="theme-color" content="#F2F3F0">
+<link rel="preload" href="../assets/fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/main.css?v=2">
+<link rel="stylesheet" href="../assets/css/case.css?v=1">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="name" href="../" aria-label="Inna Guba Design, homepage">Inna Guba <span>Design</span></a>
+    <nav aria-label="Main">
+      <a href="../#work">Projects</a>
+      <a href="../#services">Services</a>
+      <a href="../#about">About</a>
+      <a href="../#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="cs-hero">
+  <div class="wrap">
+    <p class="eyebrow">Case study · innaguba.com</p>
+    <h1>From a pretty portfolio to a website that <em class="ed">books families</em></h1>
+    <p class="lead">A research-led redesign for a family photographer and videographer in Brno. The client is my own business, so I had direct access to real clients and owned the result end-to-end.</p>
+    <div class="cs-meta">
+      <div><b>Role</b>UX research, UI/UX design, copy, front-end (AI-assisted)</div>
+      <div><b>Timeline</b>Research May 2026<br>Design &amp; build Sep–Oct 2026</div>
+      <div><b>Methods</b>Interviews, survey, persona, competitive analysis, usability tests</div>
+      <div><b>Tools</b>FigJam, Figma, HTML/CSS/JS, Claude Code</div>
+    </div>
+    <div class="cs-cover">
+      <img class="shot" src="../assets/img/innaguba/home-desktop.webp" width="1600" height="1000" alt="The new innaguba.com homepage on desktop">
+      <img class="phone" src="../assets/img/innaguba/home-mobile.webp" width="600" height="1298" alt="The homepage on a phone">
+    </div>
+  </div>
+</section>
+
+<section class="cs">
+  <div class="wrap">
+    <p class="eyebrow">Context</p>
+    <h2>Beautiful work. <em class="ed">Almost no inquiries.</em></h2>
+    <div class="prose">
+      <p>Inna had photographed families in Brno for over eleven years, then took a long break. On restart, the old website (built on a website builder) had two problems: low traffic, because there was no SEO at all, and almost no inquiries from the people who did visit.</p>
+      <p>Visitors met full-bleed images, scattered blocks and small, widely spaced text, with no clear place to look first. The site even offered online booking, "Book a date directly in the calendar", and the calendar brought in no inquiries.</p>
+      <p>I framed the question before designing anything: is the problem navigation, emotion, friction in booking, or price?</p>
+    </div>
+    <div class="fig-grid">
+      <figure class="figure"><img src="../assets/img/innaguba/old-pricing.webp" width="1600" height="841" alt="Old website: pricing packages in circular photos" loading="lazy"><figcaption>Before: pricing on the old site</figcaption></figure>
+      <figure class="figure"><img src="../assets/img/innaguba/old-text.webp" width="1600" height="841" alt="Old website: small, widely spaced text" loading="lazy"><figcaption>Before: small, widely spaced text with no clear hierarchy</figcaption></figure>
+    </div>
+    <div class="cards" style="grid-template-columns:repeat(4,1fr)">
+      <div class="card"><p class="k">Goal 1</p><p>A list of concrete pain points on the current site</p></div>
+      <div class="card"><p class="k">Goal 2</p><p>One core message that resonates with parents</p></div>
+      <div class="card"><p class="k">Goal 3</p><p>A homepage that demonstrably leads to action</p></div>
+      <div class="card"><p class="k">Goal 4</p><p>Long term: more inquiries after launch</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cs">
+  <div class="wrap">
+    <p class="eyebrow">Research</p>
+    <h2>Asking parents, <em class="ed">not guessing</em></h2>
+    <div class="prose">
+      <p>Three research questions: what makes parents feel "I want this too"? Where is the friction, and when do they leave? Do they understand the difference between photos and a family film, and would they pay more for it?</p>
+      <p>I ran three in-depth interviews with past and potential clients, walking through the live site, plus an online survey, an analysis of three established local studios, and a benchmark of good and poor mobile flows.</p>
+    </div>
+    <div class="quotes">
+      <div class="quote"><p>"The photographer rushed us. We left sweaty and stressed, and the photos were stiff."</p><span>P1 · 32, mother of one</span></div>
+      <div class="quote"><p>"The photographer has to be a bit of a psychologist. Once they get nervous, the kids cooperate even less."</p><span>P2 · 40, mother of three</span></div>
+      <div class="quote"><p>"Above all, I don't want it to feel staged."</p><span>P3 · 39, mother of two</span></div>
+    </div>
+    <p class="mute" style="margin-top:14px;font-size:14px">Participants anonymised; quotes translated from Czech.</p>
+
+    <h3 style="margin-top:clamp(48px,6vw,72px)">The survey agreed, at scale</h3>
+    <div class="stats">
+      <div class="stat accent"><b>82 %</b><span>say the quality of the result matters most</span></div>
+      <div class="stat"><b>64 %</b><span>have had a family shoot before and expect more than a basic service</span></div>
+      <div class="stat"><b>54 %</b><span>require a process without stress or pressure</span></div>
+      <div class="stat"><b>46 %</b><span>put weight on the photographer's approach and communication</span></div>
+    </div>
+    <div class="cards">
+      <div class="card"><p class="k">Biggest fears</p><p>The kids won't cooperate (the dominant fear). Feeling "unphotogenic". Not knowing how to pose or what to wear.</p></div>
+      <div class="card"><p class="k">Deal-breakers</p><p>An unpleasant approach, feeling like "just another client", chaos and disorganisation, hidden fees.</p></div>
+      <div class="card"><p class="k">Missing elsewhere</p><p>Clear guidance during the shoot: what to do so the result looks natural, not forced.</p></div>
+    </div>
+    <p class="callout">Most would rather pay more than save and risk a disappointing result.</p>
+  </div>
+</section>
+
+<section class="cs night" style="padding-top:clamp(56px,8vw,104px)">
+  <div class="wrap">
+    <p class="eyebrow">Insights</p>
+    <h2>The barrier wasn't price. <em class="ed">It was fear.</em></h2>
+    <div class="cards">
+      <div class="card"><h3>Fear beats price</h3><p>Parents worry about their children's behaviour and the photographer's patience far more than about cost.</p></div>
+      <div class="card"><h3>Clarity is trust</h3><p>Clear prices, a visible process and quick replies say "this person is safe". A cheap-looking site loses them instantly.</p></div>
+      <div class="card"><h3>Time, not discounts</h3><p>Urgency comes from children growing up, so the copy can be honest instead of salesy.</p></div>
+      <div class="card"><h3>Real over perfect</h3><p>They want themselves, not a catalogue family. Imperfect is welcome.</p></div>
+      <div class="card"><h3>Video needs a stage</h3><p>Family film is highly valued but rarely understood. It needs its own space.</p></div>
+      <div class="card"><h3>They want to talk first</h3><p>The child's age, the family's schedule, studio or outdoors or at home. It's an intimate decision.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cs" style="padding-top:clamp(56px,8vw,104px)">
+  <div class="wrap">
+    <p class="eyebrow">Who we design for</p>
+    <h2>Tereza, <em class="ed">35</em></h2>
+    <div class="prose">
+      <p>A working mum of two (2 and 6) who lives just outside Brno. A minimalist with good taste who values fairness, humanity and punctuality. She rejects the "perfect Instagram mum" image, but looks to social media for inspiration, and she wants to capture this chaotic, loving time before the kids grow up.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><p class="k">Frustrations</p><p>Staged posing and studio stiffness. Worry that the kids won't cooperate and her partner will resist. Feeling she "can't do photos". Allergic to pushy marketing.</p></div>
+      <div class="card"><p class="k">Goals</p><p>Stop time while the kids are small. Own a real family album. Finally be in the photos herself.</p></div>
+      <div class="card"><p class="k">Competitive gap</p><p>Local studios look and sound alike, lean on certificates instead of story, and rarely guide visitors along a clear path. The opportunity: position on safety and relieve stress before the shoot even starts.</p></div>
+    </div>
+    <p class="callout">Parents who want natural family memories need to trust the photographer before the shoot, because fear of chaos, forced posing and unclear logistics stops them from booking.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>How might we…</th></tr></thead>
+        <tbody>
+          <tr><td>…show on the website that "imperfect" kids are welcome?</td></tr>
+          <tr><td>…make the process so clear that getting in touch feels like a small, safe step?</td></tr>
+          <tr><td>…present price as the result of the experience, not a number to compare?</td></tr>
+          <tr><td>…turn the choice of location from a stress into a simple question?</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="cs">
+  <div class="wrap">
+    <p class="eyebrow">Ideation</p>
+    <h2>Paper first, <em class="ed">then pixels</em></h2>
+    <div class="prose"><p>I mapped the ideal journey by hand, from first impression to inquiry, sketched the homepage, then explored layouts as lo-fi wireframes and an annotated landing page where every section has a job.</p></div>
+    <div class="fig-grid three">
+      <figure class="figure"><img src="../assets/img/innaguba/flow.webp" width="900" height="1874" alt="Hand-drawn user flow from start to booking" loading="lazy"><figcaption>User flow</figcaption></figure>
+      <figure class="figure"><img src="../assets/img/innaguba/sketches.webp" width="1200" height="1604" alt="Hand-drawn homepage sketches with notes" loading="lazy"><figcaption>Homepage sketches</figcaption></figure>
+      <figure class="figure"><img src="../assets/img/innaguba/landing-wireframe.webp" width="1200" height="1844" alt="Annotated landing page wireframe" loading="lazy"><figcaption>Annotated landing page</figcaption></figure>
+    </div>
+    <figure class="figure"><img src="../assets/img/innaguba/lofi.webp" width="1800" height="1200" alt="Grid of lo-fi wireframes" loading="lazy"><figcaption>Lo-fi wireframes</figcaption></figure>
+  </div>
+</section>
+
+<section class="cs">
+  <div class="wrap">
+    <p class="eyebrow">Prototype &amp; testing</p>
+    <h2>Testing the <em class="ed">booking flow</em></h2>
+    <div class="prose"><p>A five-step mobile prototype (package, date and time, details, confirmation, e-mail), tested think-aloud with two participants, one in person and one by phone.</p></div>
+    <figure class="figure"><img src="../assets/img/innaguba/prototype.webp" width="1800" height="706" alt="Five-step mobile booking prototype" loading="lazy"><figcaption>Mobile booking prototype</figcaption></figure>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="width:50%">Finding</th><th>Change on the live site</th></tr></thead>
+        <tbody>
+          <tr><td>"Continue" in step 3 submitted the booking. The participant was surprised it was over.</td><td>The final button says exactly what it does: <b>"Send message"</b>.</td></tr>
+          <tr><td>Both participants had to <i>type</i> where they wanted the shoot.</td><td>A dedicated <b>"Where would you like the shoot?"</b> field: studio, outdoors, at home, or "advise me".</td></tr>
+          <tr><td>No way back to the portfolio from inside the flow.</td><td>The gallery is always one tap away in the navigation.</td></tr>
+          <tr><td>No "back" between steps.</td><td>The multi-step flow became <b>one short form</b>.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="cs night" style="padding-top:clamp(56px,8vw,104px)">
+  <div class="wrap">
+    <p class="eyebrow">The key decision</p>
+    <h2>Usable isn't the same <em class="ed">as wanted</em></h2>
+    <div class="prose">
+      <p>The booking prototype tested well. But I already had real-world evidence against it: the old website offered exactly this kind of calendar booking, and it brought in no inquiries.</p>
+      <p>The interviews explained why. A family shoot is intimate. Before committing, a mother wants to talk about the child's age, the family's schedule and where to shoot. Picking a slot and simply showing up skips the part that builds trust.</p>
+      <p>So the calendar became a short inquiry form: what, when, where, and an optional message. Undecided parents get their own path, "I don't know yet, I need advice", which hides the date and location fields and turns the form into a simple question.</p>
+    </div>
+    <div class="fig-grid">
+      <figure class="figure"><img src="../assets/img/innaguba/old-calendar.webp" width="1280" height="640" alt="Old website call to action: book a date directly in the calendar" loading="lazy"><figcaption>Before: "Book a date directly in the calendar"</figcaption></figure>
+      <figure class="figure"><img src="../assets/img/innaguba/new-form.webp" width="1600" height="878" alt="New inquiry form with what, when and where fields" loading="lazy"><figcaption>After: a short inquiry that starts a conversation</figcaption></figure>
+    </div>
+    <p class="callout">Usability testing showed the steps were clear. Research and real data showed parents didn't want those steps.</p>
+  </div>
+</section>
+
+<section class="cs" style="padding-top:clamp(56px,8vw,104px)">
+  <div class="wrap">
+    <p class="eyebrow">From research to interface</p>
+    <h2>Every section answers <em class="ed">a real worry</em></h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="width:42%">What parents told me</th><th>What the site does</th></tr></thead>
+        <tbody>
+          <tr><td>"What if the kids won't cooperate?"</td><td>A whole section answers it head-on: <b>"Afraid the kids won't cooperate? They don't have to."</b></td></tr>
+          <tr><td>"I don't want it to feel staged."</td><td>Reportage style and a plain promise: <b>0 % forced smiles</b>.</td></tr>
+          <tr><td>"Kids grow up so fast."</td><td>The page opens with <b>"Kids grow faster than you expect"</b>, beside one emotional video.</td></tr>
+          <tr><td>"I need to know how it will go." · guidance is missing elsewhere</td><td><b>How it works</b> in four steps: help with what to wear, a guided shoot, delivery.</td></tr>
+          <tr><td>"Unclear pricing puts me off."</td><td>Prices visible on the homepage, full pricing one click away.</td></tr>
+          <tr><td>"Video is priceless to me."</td><td>Family film is a full service with its own gallery.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="fig-grid">
+      <figure class="figure"><img src="../assets/img/innaguba/sec-reassure.webp" width="1600" height="750" alt="Homepage section: afraid the kids won't cooperate? They don't have to." loading="lazy"><figcaption>Answering the biggest fear</figcaption></figure>
+      <figure class="figure"><img src="../assets/img/innaguba/sec-steps.webp" width="1600" height="882" alt="Homepage section: how the shoot works in four steps" loading="lazy"><figcaption>How it works, in four steps</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="cs">
+  <div class="wrap">
+    <p class="eyebrow">Iteration</p>
+    <h2>Quieter <em class="ed">with every round</em></h2>
+    <div class="prose"><p>I designed and built on real content, testing every change on real devices. The hero went from a loud sans-serif "Stop time?" over a collage, through slideshows, to one emotional video and one sentence: you watch, then you read.</p></div>
+    <div class="phones">
+      <figure><img src="../assets/img/innaguba/evo-1.webp" width="500" height="1082" alt="Homepage on 3 September" loading="lazy"><figcaption>3 Sep<span>Bold sans</span></figcaption></figure>
+      <figure><img src="../assets/img/innaguba/evo-2.webp" width="500" height="1082" alt="Homepage on 6 September" loading="lazy"><figcaption>6 Sep<span>Loud headline</span></figcaption></figure>
+      <figure><img src="../assets/img/innaguba/evo-3.webp" width="500" height="1082" alt="Homepage on 15 September" loading="lazy"><figcaption>15 Sep<span>Collage</span></figcaption></figure>
+      <figure><img src="../assets/img/innaguba/evo-4.webp" width="500" height="1082" alt="Homepage on 30 September" loading="lazy"><figcaption>30 Sep<span>First serif</span></figcaption></figure>
+      <figure><img src="../assets/img/innaguba/evo-5.webp" width="500" height="1082" alt="Homepage on 7 October" loading="lazy"><figcaption>7 Oct<span>Calmer</span></figcaption></figure>
+      <figure><img src="../assets/img/innaguba/evo-6.webp" width="500" height="1082" alt="Final homepage" loading="lazy"><figcaption>Final<span>One focus</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="cs">
+  <div class="wrap">
+    <p class="eyebrow">Design system</p>
+    <h2>Strict rules, <em class="ed">so it feels effortless</em></h2>
+    <div class="cards two">
+      <div class="card">
+        <p class="k">Type</p>
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:44px;line-height:1.1;color:var(--ink);margin-top:14px">Cormorant Garamond</p>
+        <p>Emotion: headlines and italic accents.</p>
+        <p style="font-family:'Jost',sans-serif;font-size:24px;color:var(--ink);margin-top:18px">Jost</p>
+        <p>Everything practical: body, labels, buttons.</p>
+        <p style="margin-top:18px"><b style="color:var(--ink)">Three sizes, no exceptions:</b> 60 / 28 / 16.</p>
+      </div>
+      <div class="card">
+        <p class="k">Colour &amp; rules</p>
+        <div class="swatches">
+          <div class="swatch" style="background:#F5F3EF;box-shadow:inset 0 0 0 1px var(--line)">Paper<code>#F5F3EF</code></div>
+          <div class="swatch" style="background:#111;color:#F5F3EF">Ink<code>#111111</code></div>
+          <div class="swatch" style="background:#59462D;color:#F5F3EF">Walnut<code>#59462D</code></div>
+        </div>
+        <ul>
+          <li>Italic only on words that carry feeling, never on practical headings.</li>
+          <li>Dark and light sections alternate, never two dark panels in a row.</li>
+          <li>One spacing scale for every section and gap.</li>
+          <li>Mobile on one centre axis; motion respects reduced-motion settings.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs">
+  <div class="wrap">
+    <p class="eyebrow">Final design</p>
+    <h2>Calm, editorial, <em class="ed">human</em></h2>
+    <figure class="figure"><img src="../assets/img/innaguba/home-desktop.webp" width="1600" height="1000" alt="Final homepage hero on desktop" loading="lazy"></figure>
+    <div class="fig-grid three">
+      <figure class="figure"><img src="../assets/img/innaguba/m-reassure.webp" width="600" height="929" alt="Mobile: the reassurance section" loading="lazy"><figcaption>Mobile · reassurance</figcaption></figure>
+      <figure class="figure"><img src="../assets/img/innaguba/home-mobile.webp" width="600" height="1298" alt="Mobile homepage hero" loading="lazy"><figcaption>Mobile · hero</figcaption></figure>
+      <figure class="figure"><img src="../assets/img/innaguba/m-steps.webp" width="600" height="1602" alt="Mobile: how the shoot works" loading="lazy"><figcaption>Mobile · process</figcaption></figure>
+    </div>
+    <div class="fig-grid">
+      <figure class="figure"><img src="../assets/img/innaguba/gallery-portrait.webp" width="1600" height="1000" alt="Children's portrait gallery" loading="lazy"><figcaption>Gallery</figcaption></figure>
+      <figure class="figure"><img src="../assets/img/innaguba/pricing.webp" width="1600" height="1000" alt="Pricing page" loading="lazy"><figcaption>Pricing</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="cs night" style="padding-top:clamp(56px,8vw,104px)">
+  <div class="wrap">
+    <p class="eyebrow">Results</p>
+    <h2>Performance <em class="ed">is UX</em></h2>
+    <div class="prose"><p>Parents browse on phones, often on mobile data. After launch I audited the live site: phones now get a 720 px hero video, right-sized WebP images and self-hosted fonts, and video below the fold loads only on scroll.</p></div>
+    <div class="stats">
+      <div class="stat accent"><b>43 → 82</b><span>Lighthouse performance, mobile</span></div>
+      <div class="stat"><b>100</b><span>Performance, desktop (was 90)</span></div>
+      <div class="stat"><b>13 → 2.3 MB</b><span>Homepage weight on a phone</span></div>
+      <div class="stat"><b>98 · 100</b><span>Accessibility · SEO</span></div>
+    </div>
+    <div class="prose" style="margin-top:32px"><p>The site launched in September 2026, so it's too early to claim conversion results. Analytics and Search Console are set up, and traffic is already noticeably higher than on the old site. I'm tracking inquiries per month, homepage-to-contact conversion and how many parents choose "I need advice".</p></div>
+  </div>
+</section>
+
+<section class="cs" style="padding-top:clamp(56px,8vw,104px)">
+  <div class="wrap">
+    <p class="eyebrow">Reflection</p>
+    <h2>What I <em class="ed">learned</em></h2>
+    <div class="cards two">
+      <div class="card"><h3>Research changed the message</h3><p>I expected to sell beauty. Parents needed to hear that it's safe to be imperfect.</p></div>
+      <div class="card"><h3>Usable isn't the same as wanted</h3><p>Dropping a well-tested booking flow for a conversation was the most important product decision.</p></div>
+      <div class="card"><h3>Designing in the browser</h3><p>I made the design decisions; AI-assisted coding let me iterate quickly on real content and real devices.</p></div>
+      <div class="card"><h3>Next time</h3><p>Test the high-fidelity design with parents before launch, and set up analytics on the old site first for a clean before/after baseline.</p></div>
+    </div>
+    <div class="next" style="margin-top:clamp(48px,6vw,72px)">
+      <a class="line-link" href="https://innaguba.com" target="_blank" rel="noopener">Visit innaguba.com ↗</a>
+      <a class="line-link" href="../#work">Back to all projects</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p class="slogan">Look like the best in your field. <em>Because you are.</em></p>
+    <div class="foot-bar">
+      <span>© 2026 Mgr. Inna Macháč Guba · <a href="../imprint.html">Imprint</a> · <a href="../privacy.html">Privacy</a></span>
+      <span><a href="../#contact">Get in touch</a></span>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

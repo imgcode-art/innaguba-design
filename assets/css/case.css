@@ -1,0 +1,100 @@
+/* Case study pages: same language as the homepage (main.css is loaded first).
+   Light by default, one dark sage band for key moments, thin lines, rounded frames. */
+
+/* innaguba.com's own typeface, shown in its design-system card */
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 700;font-display:swap;src:url(../fonts/cormorant-garamond-italic-latin.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 700;font-display:swap;src:url(../fonts/cormorant-garamond-italic-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF}
+
+.cs-hero{padding:clamp(72px,10vw,120px) 0 clamp(56px,7vw,88px);border-bottom:1px solid var(--line)}
+.eyebrow{font-size:14px;color:var(--mute)}
+.cs-hero h1{margin-top:24px;max-width:1000px;font-family:var(--serif);font-weight:300;font-size:clamp(42px,6.5vw,80px);line-height:1.04;letter-spacing:-.02em;color:var(--ink)}
+.ed{font-style:italic;color:var(--walnut)}
+.cs-hero .lead{margin-top:28px;max-width:680px;font-size:18px;line-height:1.7}
+.cs-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px 40px;margin-top:48px;padding-top:24px;border-top:1px solid var(--line);font-size:15px}
+.cs-meta b{display:block;margin-bottom:6px;font-weight:500;color:var(--ink)}
+.cs-cover{position:relative;margin-top:clamp(48px,6vw,72px);padding:clamp(20px,3.5vw,48px);border-radius:20px;background:var(--frame);border:1px solid var(--frame-line)}
+.cs-cover .shot{width:86%;border-radius:8px;box-shadow:0 1px 2px rgba(var(--shadow),.08),0 24px 48px -28px rgba(var(--shadow),.45)}
+.cs-cover .phone{position:absolute;right:5%;bottom:-6%;width:20%;border-radius:22px;border:6px solid #1B1F1C;box-shadow:0 24px 40px -20px rgba(var(--shadow),.5)}
+
+.cs{padding:clamp(64px,9vw,104px) 0;border-bottom:1px solid var(--line)}
+.cs h2{margin-top:16px;max-width:900px;font-family:var(--serif);font-weight:300;font-size:clamp(34px,4.6vw,56px);line-height:1.1;color:var(--ink)}
+.cs h3{font-weight:500;font-size:17px;color:var(--ink)}
+.prose{max-width:720px;margin-top:28px}
+.prose p+p{margin-top:16px}
+.mute{color:var(--mute)}
+
+.figure{margin:clamp(32px,4vw,48px) 0 0}
+.figure img{width:100%;border-radius:10px;border:1px solid var(--frame-line);background:var(--frame)}
+.figure figcaption{margin-top:12px;font-size:14px;color:var(--mute)}
+.fig-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.fig-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.fig-grid .figure{margin-top:clamp(32px,4vw,48px)}
+
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:clamp(32px,4vw,48px)}
+.cards.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{padding:26px 26px 28px;border-radius:16px;background:var(--frame);border:1px solid var(--frame-line)}
+.card .k{font-size:13px;color:var(--walnut);margin-bottom:10px}
+.card h3{margin-bottom:8px}
+.card ul{margin:16px 0 0;padding-left:18px}
+.card li+li{margin-top:6px}
+
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:40px}
+.quote p{font-family:var(--serif);font-weight:300;font-size:24px;line-height:1.4;color:var(--ink)}
+.quote span{display:block;margin-top:12px;font-size:14px;color:var(--mute)}
+
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:32px}
+.stat{padding-top:18px;border-top:1px solid var(--line)}
+.stat b{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(36px,4vw,52px);line-height:1;color:var(--ink)}
+.stat.accent b{color:var(--walnut)}
+.stat span{display:block;margin-top:10px;font-size:15px}
+
+.callout{max-width:900px;margin-top:clamp(40px,5vw,56px);padding-left:24px;border-left:2px solid var(--walnut);font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(24px,2.6vw,32px);line-height:1.35;color:var(--ink)}
+
+.table-wrap{margin-top:clamp(32px,4vw,48px);overflow-x:auto}
+.table-wrap table{width:100%;min-width:560px;border-collapse:collapse;font-size:15px}
+.table-wrap th{text-align:left;font-weight:500;color:var(--ink);padding:0 20px 14px 0;border-bottom:1px solid var(--ink)}
+.table-wrap td{padding:16px 20px 16px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.table-wrap b{font-weight:500;color:var(--ink)}
+
+.phones{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;margin-top:40px}
+.phones figure{margin:0}
+.phones img{width:100%;border-radius:14px;border:1px solid var(--frame-line)}
+.phones figcaption{margin-top:10px;font-size:14px;color:var(--ink)}
+.phones figcaption span{display:block;color:var(--mute)}
+
+.swatches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
+.swatch{padding:14px;border-radius:10px;font-size:13px;min-height:84px;display:flex;flex-direction:column;justify-content:flex-end}
+.swatch code{font-size:12px;opacity:.75}
+
+/* Dark sage band for the key moments */
+.cs.night{background:var(--night);color:var(--night-text);border-bottom:0}
+.cs.night .eyebrow{color:var(--night-mute)}
+.cs.night h2,.cs.night h3,.cs.night .quote p,.cs.night .stat b,.cs.night .callout,.cs.night .table-wrap b{color:var(--cream)}
+.cs.night .ed,.cs.night .stat.accent b{color:var(--gold)}
+.cs.night .card{background:rgba(255,255,255,.04);border-color:var(--night-line)}
+.cs.night .card .k{color:var(--gold)}
+.cs.night .stat{border-color:var(--night-line)}
+.cs.night .callout{border-color:var(--gold)}
+.cs.night .figure img{border-color:var(--night-line)}
+.cs.night .figure figcaption{color:var(--night-mute)!important}
+
+.next{display:flex;flex-wrap:wrap;gap:28px;align-items:baseline;margin-top:clamp(48px,6vw,72px)}
+
+@media (max-width:900px){
+  .cs-meta{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cards,.cards.two,.quotes{grid-template-columns:1fr}
+  .fig-grid,.fig-grid.three{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .phones{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .cs-cover .phone{width:26%}
+}
+@media (max-width:640px){
+  .cs-meta{grid-template-columns:1fr}
+  .cards[style]{grid-template-columns:1fr!important}
+}
+
+/* main.css also has .accent and .quote (homepage); keep them from leaking into case-study blocks */
+.stat.accent{font-style:normal;color:inherit}
+.quotes .quote{font-family:var(--sans);font-weight:400;font-size:inherit;line-height:inherit;color:inherit}
+.cs.night .table-wrap th{color:var(--cream);border-color:var(--night-mute)}
+.cs.night .table-wrap td{border-color:var(--night-line)}
