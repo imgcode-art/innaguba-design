@@ -104,9 +104,19 @@ if (/[?&]theme=warm\b/.test(location.search)) document.documentElement.setAttrib
     var pad = (parseFloat(getComputedStyle(stack, '::after').height) + parseFloat(getComputedStyle(stack).rowGap)) || 1;
     set(cards[cards.length - 1], clamp(1 - (stack.getBoundingClientRect().bottom - lastBottom) / pad), false);
   }
+  // phones: cards grow with their text, so give them all the height of the tallest one;
+  // otherwise a taller card underneath would peek out below a shorter one on top
+  function equalize() {
+    cards.forEach(function (c) { c.style.minHeight = ''; });
+    if (window.innerWidth > 900) return;
+    var h = Math.max.apply(null, cards.map(function (c) { return c.offsetHeight; }));
+    cards.forEach(function (c) { c.style.minHeight = h + 'px'; });
+  }
   function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
   window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
+  window.addEventListener('resize', function () { equalize(); onScroll(); });
+  window.addEventListener('load', function () { equalize(); onScroll(); });
+  equalize();
   update();
 })();
 

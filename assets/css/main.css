@@ -278,9 +278,12 @@ h1,h2,h3,p{margin:0}
 .project-link{margin-top:auto;align-self:flex-start}
 
 /* Projects: large cards that stick under the header and slide over each other while scrolling */
-.stack{display:flex;flex-direction:column;gap:clamp(24px,4vw,40px);margin-top:clamp(8px,2vw,16px);margin-bottom:-14vh}
-/* empty space after the last card: the stack holds still here while the last card settles to the same size */
+.stack{display:flex;flex-direction:column;gap:clamp(24px,4vw,40px);margin-top:clamp(8px,2vw,16px)}
+/* empty space after the last card: the stack holds still here while the last card settles to the same size,
+   and it doubles as the gap before the photo strip */
 .stack::after{content:"";height:18vh}
+#work{padding-bottom:0;border-bottom:0}
+#work + .photo-strip{padding-top:0}
 .stack-card{--bg:var(--sand);--fg:var(--ink);--txt:var(--body);--sub:var(--mute);
   position:sticky;top:calc(var(--head-h,66px) + 20px + var(--i) * 14px);
   display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);
@@ -290,9 +293,9 @@ h1,h2,h3,p{margin:0}
   transform-origin:50% 0;will-change:transform}
 .stack-card{--acc:#405530}
 .stack-card.tone-lavender{--bg:#C1C5E1}
-.stack-card.tone-sage{--bg:#C0CEBB}
+.stack-card.tone-sage{--bg:#C0CEBB;--acc:#5F63A3} /* violet of the first card, deep enough to read */
 .stack-card.tone-blue{--bg:#809EBB;--acc:#1F2E45;--sub:#2E3B48}
-.stack-card.tone-forest{--bg:#405530;--fg:#F0EFEC;--txt:#DCE3D3;--sub:#B7C4AC;--acc:#E9AAD6}
+.stack-card.tone-forest{--bg:#405530;--fg:#F0EFEC;--txt:#DCE3D3;--sub:#B7C4AC;--acc:#F2A462}
 .stack-card{--sub:rgba(27,31,28,.62)} /* labels on the light cards */
 .stack-text{display:flex;flex-direction:column;gap:18px;padding:clamp(4px,1.4vw,16px) 0 clamp(4px,1.4vw,16px) clamp(4px,1.4vw,16px);min-height:0}
 .stack-kind{margin:0;font-size:14px;color:var(--sub)}
@@ -313,7 +316,7 @@ h1,h2,h3,p{margin:0}
   .stack-card .project-story{font-size:15px}
 }
 /* short screens or reduced motion: cards simply follow each other */
-@media (max-height:620px),(prefers-reduced-motion:reduce){.stack-card{position:relative;top:auto}.stack{margin-bottom:0}.stack::after{display:none}}
+@media (max-height:620px),(prefers-reduced-motion:reduce){.stack-card{position:relative;top:auto}.stack::after{height:clamp(64px,9vw,96px)}}
 @media (prefers-reduced-motion:reduce){.stack-img img{transition:none}}
 /* tablet mockups sit straight on the card colour, no frame */
 .stack-img.device{border-radius:0;overflow:visible;display:flex;align-items:center;justify-content:center}
