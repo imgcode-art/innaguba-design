@@ -109,3 +109,14 @@ if (/[?&]theme=warm\b/.test(location.search)) document.documentElement.setAttrib
   window.addEventListener('resize', onScroll);
   update();
 })();
+
+// Hand-drawn marks draw themselves once, when they scroll into view.
+(function () {
+  var marks = document.querySelectorAll('.mark');
+  if (!marks.length) return;
+  if (!('IntersectionObserver' in window)) { marks.forEach(function (m) { m.classList.add('is-drawn'); }); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-drawn'); io.unobserve(e.target); } });
+  }, { threshold: 1 });
+  marks.forEach(function (m) { io.observe(m); });
+})();
