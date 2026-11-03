@@ -133,10 +133,8 @@
 @media (max-width:900px){.founder{grid-template-columns:1fr}.founder .figure{max-width:420px}}
 .founder .prose p:first-child{font-family:var(--serif);font-weight:400;font-size:clamp(25px,2.2vw,31px);line-height:1.4;color:var(--ink)}
 
-/* Text cards in each case study: soft grey for the two websites, the card colour for the two shoots */
-.case-innaguba,.case-topenivcajku{--frame:#E3E2DF;--frame-line:#D3D1CD}
-.case-herb-farm{--frame:#C0CEBB;--frame-line:#A7B8A1}
-.case-loukal{--frame:#B9CADB;--frame-line:#9CB3C8}
+/* Text cards in every case study: one soft grey */
+.case-innaguba,.case-topenivcajku,.case-herb-farm,.case-loukal{--frame:#E3E2DF;--frame-line:#D3D1CD}
 
 /* Photos and screenshots stand on their own: no coloured frame, border or box around them */
 .figure img,.figure video{border:0;background:none}
