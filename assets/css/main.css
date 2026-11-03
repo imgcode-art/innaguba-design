@@ -352,6 +352,7 @@ h1,h2,h3,p{margin:0}
 .mark-svg{position:absolute;pointer-events:none;overflow:visible;fill:none;stroke:var(--mark);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 .mark-svg path{vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:0}
 .mark-circle{margin-right:.25em}
+.mark-circle.is-mid{margin-left:.4em}
 .mark-circle .mark-svg{left:-.45em;top:-.3em;width:calc(100% + .9em);height:calc(100% + .6em)}
 .mark-under .mark-svg{left:-.1em;right:-.1em;bottom:-.42em;width:calc(100% + .2em);height:.55em}
 .site-foot .mark,.band-night .mark{--mark:var(--gold)}
