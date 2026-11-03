@@ -167,6 +167,9 @@ h1,h2,h3,p{margin:0}
 
 /* Services */
 .band-sand{background:var(--sand);border-bottom:0}
+/* services: the lavender of the first project card instead of the grey-green, prices in forest green */
+#services{--sand:#C1C5E1;--sand-line:#A3A8CC}
+#services .price{color:#405530}
 /* prices sit on one line across the three columns, whatever the text length */
 #services .cols-3>div:not(.price-note){display:flex;flex-direction:column}
 #services .price{margin-top:auto;padding-top:14px}
