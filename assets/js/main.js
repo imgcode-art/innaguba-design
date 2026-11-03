@@ -46,3 +46,18 @@ if (/[?&]theme=warm\b/.test(location.search)) document.documentElement.setAttrib
     }, 450);
   }, 3200);
 })();
+
+// Phone menu: open/close, close on link tap or Escape.
+(function () {
+  var btn = document.querySelector('.menu-btn');
+  if (!btn) return;
+  var root = document.documentElement;
+  function set(open) {
+    root.classList.toggle('menu-open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  btn.addEventListener('click', function () { set(!root.classList.contains('menu-open')); });
+  document.querySelectorAll('#site-nav a').forEach(function (a) { a.addEventListener('click', function () { set(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+})();

@@ -67,6 +67,14 @@ h1,h2,h3,p{margin:0}
 .site-head nav{display:flex;gap:clamp(18px,3vw,36px)}
 .site-head nav a{text-decoration:none}
 
+/* Mobile menu button (hidden on larger screens) */
+.menu-btn{display:none;width:44px;height:44px;margin:0;padding:0;border:0;background:none;cursor:pointer;position:relative;color:var(--ink)}
+.menu-btn span{position:absolute;left:11px;right:11px;height:1.5px;background:currentColor;transition:transform .3s ease,top .3s ease}
+.menu-btn span:nth-child(1){top:17px}
+.menu-btn span:nth-child(2){top:25px}
+.menu-open .menu-btn span:nth-child(1){top:21px;transform:rotate(45deg)}
+.menu-open .menu-btn span:nth-child(2){top:21px;transform:rotate(-45deg)}
+
 /* Sections */
 .section{padding:clamp(64px,9vw,96px) 0;border-bottom:1px solid var(--line)}
 .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr);gap:40px}
@@ -215,7 +223,16 @@ h1,h2,h3,p{margin:0}
   .hero-title{grid-template-columns:1fr;gap:28px}
   .seal{width:112px;justify-self:end;margin-right:-7px}
   .seal-ring text{font-size:14px}
-  .site-head .wrap{flex-direction:column;gap:8px;padding-top:16px;padding-bottom:14px}
+  /* phone header: logo centred, menu button on the right, links open as a full-screen panel */
+  /* no backdrop blur here: it would make the fixed menu panel position itself inside the header */
+  .site-head{background:var(--paper);backdrop-filter:none;-webkit-backdrop-filter:none}
+  .site-head .wrap{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:8px;padding-top:12px;padding-bottom:12px}
+  .site-head .name{grid-column:2;justify-self:center;font-size:16px}
+  .menu-btn{display:block;grid-column:3;grid-row:1}
+  .site-head nav{position:fixed;inset:var(--head-h,69px) 0 0 0;z-index:9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;background:var(--paper);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s}
+  .site-head nav a{font-family:var(--serif);font-weight:300;font-size:36px;color:var(--ink)}
+  .menu-open .site-head nav{opacity:1;visibility:visible}
+  .menu-open{overflow:hidden}
   .hero-foot{flex-direction:column;align-items:flex-start}
   .hero-cta{width:auto;margin-right:0;text-align:left}
   .project-meta{flex-direction:column;gap:2px}
