@@ -281,7 +281,7 @@ h1,h2,h3,p{margin:0}
   border-radius:24px;background:var(--bg);color:var(--txt);
   box-shadow:0 -1px 0 rgba(255,255,255,.4) inset,0 -18px 40px -28px rgba(var(--shadow),.35);
   transform-origin:50% 0;will-change:transform}
-.stack-card.tone-sand{--bg:#E9E4DB}
+.stack-card.tone-sand{--bg:#D8C8B0}
 .stack-card.tone-sage{--bg:#DCE4D6}
 .stack-card.tone-clay{--bg:#EBDDCF}
 .stack-card.tone-night{--bg:var(--night);--fg:var(--cream);--txt:var(--night-text);--sub:var(--night-mute)}
