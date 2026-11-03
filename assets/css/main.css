@@ -80,7 +80,7 @@ h1,h2,h3,p{margin:0}
 /* Hero */
 .hero{padding:clamp(80px,12vw,140px) 0 clamp(72px,10vw,120px);border-bottom:1px solid var(--line)}
 .hero h1{margin-top:28px;max-width:1000px;font-family:var(--serif);font-weight:300;font-size:clamp(46px,8vw,96px);line-height:1.02;letter-spacing:-.02em;color:var(--ink)}
-.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-top:56px}
+.hero-foot{display:flex;justify-content:space-between;align-items:last baseline;gap:32px;margin-top:56px}
 .hero-foot p{max-width:600px}
 /* same box as the seal above, so the link sits centred under the heart */
 .hero-cta{width:180px;margin-right:-11px;text-align:center}

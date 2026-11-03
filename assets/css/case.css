@@ -44,7 +44,7 @@
 
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:32px}
 .stat{padding-top:18px;border-top:1px solid var(--line)}
-.stat b{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(36px,4vw,52px);line-height:1;color:var(--ink)}
+.stat b{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(28px,3vw,42px);line-height:1;white-space:nowrap;color:var(--ink)}
 .stat.accent b{color:var(--walnut)}
 .stat span{display:block;margin-top:10px;font-size:15px}
 
@@ -98,3 +98,6 @@
 .quotes .quote{font-family:var(--sans);font-weight:400;font-size:inherit;line-height:inherit;color:inherit}
 .cs.night .table-wrap th{color:var(--cream);border-color:var(--night-mute)}
 .cs.night .table-wrap td{border-color:var(--night-line)}
+
+/* three phone screens side by side: same height, cropped from the top */
+.phones-even img{aspect-ratio:600/929;object-fit:cover;object-position:top}
