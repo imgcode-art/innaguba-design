@@ -67,6 +67,10 @@ h1,h2,h3,p{margin:0}
 .site-head nav{display:flex;gap:clamp(18px,3vw,36px)}
 .site-head nav a{text-decoration:none}
 
+/* Language switch: one quiet link after the menu */
+.site-head nav .lang{padding-left:clamp(18px,3vw,36px);border-left:1px solid var(--line);color:var(--mute);letter-spacing:.08em}
+.site-head nav .lang:hover{color:var(--walnut)}
+
 /* Mobile menu button (hidden on larger screens) */
 .menu-btn{display:none;width:44px;height:44px;margin:0;padding:0;border:0;background:none;cursor:pointer;position:relative;color:var(--ink)}
 .menu-btn span{position:absolute;left:11px;right:11px;height:1.5px;background:currentColor;transition:transform .3s ease,top .3s ease}
@@ -99,7 +103,8 @@ h1,h2,h3,p{margin:0}
 .seal-heart{position:absolute;left:38%;top:38%;width:24%;height:24%;fill:none;stroke:var(--walnut);stroke-width:1.1;stroke-linejoin:round;overflow:visible}
 @keyframes seal-spin{to{transform:rotate(360deg)}}
 
-/* Rotating last word of the headline */
+/* Rotating last word of the headline. Reserve the tallest variant's lines so nothing below jumps. */
+.hero h1:lang(de){min-height:3.06em}
 .rotator{display:inline-block;transition:opacity .45s ease,transform .45s cubic-bezier(.2,.7,.2,1)}
 .rotator.is-out{opacity:0;transform:translateY(.25em)}
 
@@ -236,7 +241,9 @@ h1,h2,h3,p{margin:0}
   .site-head nav a{font-family:var(--serif);font-weight:300;font-size:36px;color:var(--ink)}
   .menu-open .site-head nav{opacity:1;visibility:visible}
   .menu-open{overflow:hidden}
+  .site-head nav .lang{padding-left:0;border-left:0;font-family:var(--sans);font-size:15px;letter-spacing:.12em;margin-top:12px}
   .hero-foot{flex-direction:column;align-items:flex-start}
+  .hero h1:lang(de){min-height:4.08em}
   .hero-cta{width:auto;margin-right:0;text-align:left}
   .project-meta{flex-direction:column;gap:2px}
   .project-meta span{text-align:left}
