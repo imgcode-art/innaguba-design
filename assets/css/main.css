@@ -97,15 +97,18 @@ h1,h2,h3,p{margin:0}
 .hero h1{margin-top:28px;max-width:1000px;font-family:var(--serif);font-weight:300;font-size:clamp(54px,9.4vw,116px);line-height:.98;letter-spacing:-.01em;color:var(--ink)}
 .hero-foot{display:flex;justify-content:space-between;align-items:last baseline;gap:32px;margin-top:56px}
 .hero-foot p{max-width:600px}
-/* same box as the seal above, so the link sits centred under the heart */
-.hero-cta{width:180px;margin-right:-11px;text-align:center;position:relative;top:-14px}
+/* hero button: the same as the main button on innaguba.com, light with a fine dark frame and a soft shadow */
+.hero-foot{align-items:flex-end}
+.btn{display:inline-block;padding:16px 26px;font-size:14px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;white-space:nowrap;color:var(--ink);background:var(--paper);border:1px solid var(--ink);box-shadow:10px 14px 24px -10px rgba(17,17,17,.35);transition:background .25s ease,color .25s ease,transform .25s ease}
+.btn:hover{background:var(--ink);color:var(--paper);transform:scale(1.04)}
+@media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
 
 .hero-title{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end}
 .seal{position:relative;width:180px;aspect-ratio:1;color:var(--ink);margin-bottom:-8px;margin-right:-11px}
 /* the ring text sits about 6% inside its box, so pull the box out ~11px to line its visible edge up with "Start a project" */
 .seal-ring{position:absolute;inset:0;width:100%;height:100%;transform-origin:50% 50%;will-change:transform;animation:seal-spin 90s linear infinite}
 .seal-ring text{font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:.12em;fill:currentColor;opacity:.6}
-.seal-heart{position:absolute;left:38%;top:38%;width:24%;height:24%;fill:none;stroke:var(--walnut);stroke-width:1.1;stroke-linejoin:round;overflow:visible}
+.seal-heart{position:absolute;left:38%;top:38%;width:24%;height:24%;fill:var(--walnut);stroke:var(--walnut);stroke-width:1.1;stroke-linejoin:round;overflow:visible}
 @keyframes seal-spin{to{transform:rotate(360deg)}}
 
 /* Rotating last word of the headline. Reserve the tallest variant's lines so nothing below jumps. */
@@ -265,7 +268,6 @@ h1,h2,h3,p{margin:0}
   .site-head nav .lang{padding-left:0;border-left:0;font-family:var(--sans);font-size:15px;letter-spacing:.12em;margin-top:12px}
   .hero-foot{flex-direction:column;align-items:flex-start}
   .hero h1:lang(de){min-height:4.08em}
-  .hero-cta{width:auto;margin-right:0;text-align:left;top:0}
   .project-meta{flex-direction:column;gap:2px}
   .project-meta span{text-align:left}
   .foot-bar{flex-direction:column}
