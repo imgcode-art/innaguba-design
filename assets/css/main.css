@@ -271,3 +271,39 @@ h1,h2,h3,p{margin:0}
 /* project cards: link names never break, "Read the case study" lines up at the bottom of each row */
 .project-meta .live{white-space:nowrap}
 .project-link{margin-top:auto;align-self:flex-start}
+
+/* Projects: large cards that stick under the header and slide over each other while scrolling */
+.stack{display:flex;flex-direction:column;gap:clamp(24px,4vw,40px);margin-top:clamp(8px,2vw,16px)}
+.stack-card{--bg:var(--sand);--fg:var(--ink);--txt:var(--body);--sub:var(--mute);
+  position:sticky;top:calc(var(--head-h,66px) + 20px + var(--i) * 14px);
+  display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);
+  height:clamp(460px,calc(100vh - var(--head-h,66px) - 120px),600px);padding:clamp(20px,2.6vw,32px);
+  border-radius:24px;background:var(--bg);color:var(--txt);
+  box-shadow:0 -1px 0 rgba(255,255,255,.4) inset,0 -18px 40px -28px rgba(var(--shadow),.35);
+  transform-origin:50% 0;will-change:transform}
+.stack-card.tone-sand{--bg:#E9E4DB}
+.stack-card.tone-sage{--bg:#DCE4D6}
+.stack-card.tone-clay{--bg:#EBDDCF}
+.stack-card.tone-night{--bg:var(--night);--fg:var(--cream);--txt:var(--night-text);--sub:var(--night-mute)}
+.stack-text{display:flex;flex-direction:column;gap:18px;padding:clamp(4px,1.4vw,16px) 0 clamp(4px,1.4vw,16px) clamp(4px,1.4vw,16px);min-height:0}
+.stack-kind{margin:0;font-size:14px;color:var(--sub)}
+.stack-title{margin:0;font-family:var(--serif);font-weight:300;font-size:clamp(30px,3.4vw,48px);line-height:1.08;letter-spacing:-.01em;color:var(--fg)}
+.stack-title em{font-style:italic;color:var(--walnut)}
+.tone-night .stack-title em{color:var(--gold)}
+.stack-card .project-story{margin:0;color:var(--txt)}
+.stack-card .project-story em{color:var(--sub)}
+.stack-links{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:baseline;margin-top:auto}
+.stack-card .project-link,.stack-card .live{color:var(--fg);text-decoration-color:currentColor}
+.stack-card .live{font-size:15px;text-decoration:underline;text-decoration-color:color-mix(in srgb,currentColor 35%,transparent);text-underline-offset:4px;white-space:nowrap}
+.stack-img{display:block;min-height:0;border-radius:16px;overflow:hidden}
+.stack-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.stack-card:hover .stack-img img{transform:scale(1.03)}
+@media (max-width:900px){
+  .stack-card{grid-template-columns:1fr;grid-template-rows:auto auto;height:auto;top:calc(var(--head-h,60px) + 12px + var(--i) * 10px);gap:20px;border-radius:20px}
+  .stack-text{padding:4px 4px 0;gap:14px}
+  .stack-img{order:-1;aspect-ratio:4/3}
+  .stack-card .project-story{font-size:15px}
+}
+/* short screens or reduced motion: cards simply follow each other */
+@media (max-height:620px),(prefers-reduced-motion:reduce){.stack-card{position:relative;top:auto}}
+@media (prefers-reduced-motion:reduce){.stack-img img{transition:none}}

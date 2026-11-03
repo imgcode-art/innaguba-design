@@ -78,3 +78,23 @@ if (/[?&]theme=warm\b/.test(location.search)) document.documentElement.setAttrib
   }, { threshold: 0.4 });
   vids.forEach(function (v) { io.observe(v); });
 })();
+
+// Project cards: as the next card slides over, the one underneath shrinks a little and fades back.
+(function () {
+  var cards = [].slice.call(document.querySelectorAll('.stack-card'));
+  if (cards.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var ticking = false;
+  function update() {
+    ticking = false;
+    for (var i = 0; i < cards.length - 1; i++) {
+      var a = cards[i].getBoundingClientRect(), b = cards[i + 1].getBoundingClientRect();
+      var p = Math.min(1, Math.max(0, 1 - (b.top - a.top) / a.height));
+      cards[i].style.transform = p ? 'scale(' + (1 - p * 0.05) + ')' : '';
+      cards[i].style.filter = p ? 'brightness(' + (1 - p * 0.12) + ')' : '';
+    }
+  }
+  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  update();
+})();
