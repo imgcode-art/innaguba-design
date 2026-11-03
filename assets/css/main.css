@@ -131,7 +131,7 @@ h1,h2,h3,p{margin:0}
 /* A full-width project card (the brand shoot) under the two website cards */
 .project-wide{grid-column:1/-1}
 .project-wide .project-img{padding:0;border:0;background:none}
-.project-wide .project-img img{aspect-ratio:21/9;object-fit:cover;object-position:center 60%;border-radius:16px;box-shadow:none}
+.project-wide .project-img img{aspect-ratio:21/9;object-fit:cover;object-position:center 40%;border-radius:16px;box-shadow:none}
 .project-wide .project-story{max-width:760px}
 
 /* Photography strip */
