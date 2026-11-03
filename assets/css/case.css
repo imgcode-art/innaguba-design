@@ -114,3 +114,15 @@
 .client span{display:flex;flex-direction:column;font-weight:500;line-height:1.3}
 .client small{font-weight:400;font-size:14px;color:var(--mute)}
 .client:hover small{color:var(--walnut)}
+
+/* phones: two-column tables become stacked cards instead of scrolling sideways */
+@media (max-width:640px){
+  .table-wrap table{min-width:0}
+  .table-wrap thead{display:none}
+  .table-wrap tr{display:block;padding:16px 0;border-bottom:1px solid var(--line)}
+  .table-wrap td{display:block;padding:0;border:0}
+  .table-wrap td+td{margin-top:6px;color:var(--ink)}
+  .cs.night .table-wrap tr{border-color:var(--night-line)}
+  .cs.night .table-wrap td+td{color:var(--cream)}
+  .client img{width:52px;height:52px}
+}

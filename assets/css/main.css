@@ -147,6 +147,7 @@ h1,h2,h3,p{margin:0}
 .about-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;align-items:start}
 .about-photo{width:240px;height:240px;border-radius:50%;object-fit:cover}
 .about-text{grid-column:span 2;display:flex;flex-direction:column;gap:18px}
+.about-text a:not(.line-link){color:var(--walnut);text-underline-offset:3px}
 .about-lead{font-family:var(--serif);font-weight:300;font-size:30px;line-height:1.3;color:var(--ink)}
 .facts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:10px 32px;margin:12px 0 0;padding-top:20px;border-top:1px solid var(--line);font-size:14px}
 .facts dt{color:var(--mute)}
@@ -236,7 +237,13 @@ h1,h2,h3,p{margin:0}
 }
 @media (max-width:640px){
   .hero-title{grid-template-columns:1fr;gap:28px}
-  .seal{width:112px;justify-self:end;margin-right:-7px}
+  .work-head{flex-direction:column;align-items:flex-start;gap:10px}
+  .project-wide .project-img img{aspect-ratio:4/3}
+  .about-photo{justify-self:center;margin:0 auto}
+  .contact-lines{display:flex;flex-direction:column;gap:6px}
+  .contact-lines .sep{display:none}
+  .step-title{font-size:38px}
+  .seal{width:120px;justify-self:center;margin:0}
   .seal-ring text{font-size:14px}
   /* phone header: logo centred, menu button on the right, links open as a full-screen panel */
   /* no backdrop blur here: it would make the fixed menu panel position itself inside the header */
