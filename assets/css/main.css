@@ -133,10 +133,6 @@ h1,h2,h3,p{margin:0}
 .project-wide .project-img{padding:0;border:0;background:none}
 .project-wide .project-img img{aspect-ratio:21/9;object-fit:cover;object-position:center 60%;border-radius:16px;box-shadow:none}
 .project-wide .project-story{max-width:760px}
-/* the brand-shoot card shows three portraits side by side instead of one wide photo */
-.project-wide .project-img.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.project-wide .project-img.trio img{aspect-ratio:4/5;object-position:center 30%;border-radius:14px}
-@media (max-width:640px){.project-wide .project-img.trio{grid-template-columns:1fr 1fr}.project-wide .project-img.trio img:nth-child(3){display:none}}
 
 /* Photography strip */
 .photo-strip{padding:clamp(64px,9vw,104px) 0;border-bottom:1px solid var(--line)}
