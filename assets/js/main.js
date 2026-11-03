@@ -130,3 +130,25 @@ if (/[?&]theme=warm\b/.test(location.search)) document.documentElement.setAttrib
   }, { threshold: 1 });
   marks.forEach(function (m) { io.observe(m); });
 })();
+
+// Process: light up the step nearest the middle of the screen.
+(function () {
+  var list = document.querySelector('#process .steps');
+  if (!list || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var steps = [].slice.call(list.querySelectorAll('.step'));
+  var ticking = false;
+  list.classList.add('is-focus');
+  function update() {
+    ticking = false;
+    var mid = window.innerHeight * 0.5, best = 0, bestD = Infinity;
+    steps.forEach(function (s, i) {
+      var r = s.getBoundingClientRect(), d = Math.abs(r.top + r.height / 2 - mid);
+      if (d < bestD) { bestD = d; best = i; }
+    });
+    steps.forEach(function (s, i) { s.classList.toggle('is-active', i === best); });
+  }
+  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  update();
+})();
