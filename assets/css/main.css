@@ -125,8 +125,10 @@ h1,h2,h3,p{margin:0}
 .project-link{font-size:15px;color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
 
 /* Tablet mockups (her own mockup with the live sites on screen) */
-.project-img.tablet{padding:0;border:0;background:none;border-radius:16px}
-.project-img.tablet img{aspect-ratio:4/3;object-fit:cover;border-radius:16px;box-shadow:none}
+.project-img.tablet,.project-img.photo{padding:0;border:0;background:none;border-radius:16px}
+.project-img.tablet img,.project-img.photo img{aspect-ratio:4/3;object-fit:cover;border-radius:16px;box-shadow:none}
+
+.project-img.photo img{object-position:center}
 
 /* A full-width project card (the brand shoot) under the two website cards */
 .project-wide{grid-column:1/-1}

@@ -126,3 +126,6 @@
   .cs.night .table-wrap td+td{color:var(--cream)}
   .client img{width:52px;height:52px}
 }
+
+/* video clips sit in the same frames as photos */
+.figure video{display:block;width:100%;height:auto;border-radius:10px;background:var(--frame)}

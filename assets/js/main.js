@@ -61,3 +61,20 @@ if (/[?&]theme=warm\b/.test(location.search)) document.documentElement.setAttrib
   document.querySelectorAll('#site-nav a').forEach(function (a) { a.addEventListener('click', function () { set(false); }); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
 })();
+
+// Silent video loops play only while on screen; reduced motion gets controls instead.
+(function () {
+  var vids = document.querySelectorAll('video.loop');
+  if (!vids.length) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+    vids.forEach(function (v) { v.controls = true; });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { var p = e.target.play(); if (p) p.catch(function () {}); }
+      else e.target.pause();
+    });
+  }, { threshold: 0.4 });
+  vids.forEach(function (v) { io.observe(v); });
+})();
