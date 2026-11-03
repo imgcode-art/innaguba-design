@@ -1,13 +1,10 @@
 /* Case study pages: same language as the homepage (main.css is loaded first).
    Light by default, one dark sage band for key moments, thin lines, rounded frames. */
 
-/* innaguba.com's own typeface, shown in its design-system card */
-@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 700;font-display:swap;src:url(../fonts/cormorant-garamond-italic-latin.woff2) format('woff2')}
-@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 700;font-display:swap;src:url(../fonts/cormorant-garamond-italic-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF}
 
 .cs-hero{padding:clamp(72px,10vw,120px) 0 clamp(56px,7vw,88px);border-bottom:1px solid var(--line)}
 .eyebrow{font-size:14px;color:var(--mute)}
-.cs-hero h1{margin-top:24px;max-width:1000px;font-family:var(--serif);font-weight:300;font-size:clamp(42px,6.5vw,80px);line-height:1.04;letter-spacing:-.02em;color:var(--ink)}
+.cs-hero h1{margin-top:24px;max-width:1000px;font-family:var(--serif);font-weight:300;font-size:clamp(47px,6.5vw,90px);line-height:1.04;letter-spacing:-.02em;color:var(--ink)}
 .ed{font-style:italic;color:var(--walnut)}
 .cs-hero .lead{margin-top:28px;max-width:680px;font-size:18px;line-height:1.7}
 .cs-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px 40px;margin-top:48px;padding-top:24px;border-top:1px solid var(--line);font-size:15px}
@@ -17,7 +14,7 @@
 .cs-cover .phone{position:absolute;right:5%;bottom:-6%;width:20%;border-radius:22px;border:6px solid #1B1F1C;box-shadow:0 24px 40px -20px rgba(var(--shadow),.5)}
 
 .cs{padding:clamp(64px,9vw,104px) 0;border-bottom:1px solid var(--line)}
-.cs h2{margin-top:16px;max-width:900px;font-family:var(--serif);font-weight:300;font-size:clamp(34px,4.6vw,56px);line-height:1.1;color:var(--ink)}
+.cs h2{margin-top:16px;max-width:900px;font-family:var(--serif);font-weight:300;font-size:clamp(38px,4.6vw,63px);line-height:1.1;color:var(--ink)}
 .cs h3{font-weight:500;font-size:17px;color:var(--ink)}
 .prose{max-width:720px;margin-top:28px}
 .prose p+p{margin-top:16px}
@@ -39,16 +36,16 @@
 .card li+li{margin-top:6px}
 
 .quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:40px}
-.quote p{font-family:var(--serif);font-weight:300;font-size:24px;line-height:1.4;color:var(--ink)}
+.quote p{font-family:var(--serif);font-weight:400;font-size:27px;line-height:1.4;color:var(--ink)}
 .quote span{display:block;margin-top:12px;font-size:14px;color:var(--mute)}
 
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:32px}
 .stat{padding-top:18px;border-top:1px solid var(--line)}
-.stat b{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(28px,3vw,42px);line-height:1;white-space:nowrap;color:var(--ink)}
+.stat b{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(31px,3vw,47px);line-height:1;white-space:nowrap;color:var(--ink)}
 .stat.accent b{color:var(--walnut)}
 .stat span{display:block;margin-top:10px;font-size:15px}
 
-.callout{max-width:900px;margin-top:clamp(40px,5vw,56px);padding-left:24px;border-left:2px solid var(--walnut);font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(24px,2.6vw,32px);line-height:1.35;color:var(--ink)}
+.callout{max-width:900px;margin-top:clamp(40px,5vw,56px);padding-left:24px;border-left:2px solid var(--walnut);font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(27px,2.6vw,36px);line-height:1.35;color:var(--ink)}
 
 .table-wrap{margin-top:clamp(32px,4vw,48px);overflow-x:auto}
 .table-wrap table{width:100%;min-width:560px;border-collapse:collapse;font-size:15px}
@@ -134,4 +131,4 @@
 .founder{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,72px);align-items:center}
 .founder .prose{margin-top:clamp(32px,4vw,48px)}
 @media (max-width:900px){.founder{grid-template-columns:1fr}.founder .figure{max-width:420px}}
-.founder .prose p:first-child{font-family:var(--serif);font-weight:300;font-size:clamp(22px,2.2vw,28px);line-height:1.4;color:var(--ink)}
+.founder .prose p:first-child{font-family:var(--serif);font-weight:400;font-size:clamp(25px,2.2vw,31px);line-height:1.4;color:var(--ink)}
