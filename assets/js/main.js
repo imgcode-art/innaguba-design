@@ -80,18 +80,29 @@ if (/[?&]theme=warm\b/.test(location.search)) document.documentElement.setAttrib
 })();
 
 // Project cards: as the next card slides over, the one underneath shrinks a little and fades back.
+// Every card ends at exactly the same size; the last one shrinks during the short pause at the end of the stack.
 (function () {
+  var stack = document.querySelector('.stack');
   var cards = [].slice.call(document.querySelectorAll('.stack-card'));
   if (cards.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var ticking = false;
+  function clamp(v) { return Math.min(1, Math.max(0, v)); }
+  function set(card, p, dim) {
+    card.style.transform = p ? 'scale(' + (1 - p * 0.05) + ')' : '';
+    card.style.filter = p && dim ? 'brightness(' + (1 - p * 0.12) + ')' : '';
+  }
   function update() {
     ticking = false;
+    if (getComputedStyle(cards[0]).position !== 'sticky') { cards.forEach(function (c) { set(c, 0); }); return; }
     for (var i = 0; i < cards.length - 1; i++) {
       var a = cards[i].getBoundingClientRect(), b = cards[i + 1].getBoundingClientRect();
-      var p = Math.min(1, Math.max(0, 1 - (b.top - a.top) / a.height));
-      cards[i].style.transform = p ? 'scale(' + (1 - p * 0.05) + ')' : '';
-      cards[i].style.filter = p ? 'brightness(' + (1 - p * 0.12) + ')' : '';
+      var gap = parseFloat(getComputedStyle(cards[i + 1]).top) - parseFloat(getComputedStyle(cards[i]).top);
+      var h = cards[i].offsetHeight; // layout height, ignores the scale already applied
+      set(cards[i], clamp((h - (b.top - a.top)) / (h - gap)), true);
     }
+    var lastCard = cards[cards.length - 1], lastBottom = lastCard.getBoundingClientRect().top + lastCard.offsetHeight;
+    var pad = (parseFloat(getComputedStyle(stack, '::after').height) + parseFloat(getComputedStyle(stack).rowGap)) || 1;
+    set(cards[cards.length - 1], clamp(1 - (stack.getBoundingClientRect().bottom - lastBottom) / pad), false);
   }
   function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
   window.addEventListener('scroll', onScroll, { passive: true });

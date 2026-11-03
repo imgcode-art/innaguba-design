@@ -278,7 +278,9 @@ h1,h2,h3,p{margin:0}
 .project-link{margin-top:auto;align-self:flex-start}
 
 /* Projects: large cards that stick under the header and slide over each other while scrolling */
-.stack{display:flex;flex-direction:column;gap:clamp(24px,4vw,40px);margin-top:clamp(8px,2vw,16px)}
+.stack{display:flex;flex-direction:column;gap:clamp(24px,4vw,40px);margin-top:clamp(8px,2vw,16px);margin-bottom:-14vh}
+/* empty space after the last card: the stack holds still here while the last card settles to the same size */
+.stack::after{content:"";height:18vh}
 .stack-card{--bg:var(--sand);--fg:var(--ink);--txt:var(--body);--sub:var(--mute);
   position:sticky;top:calc(var(--head-h,66px) + 20px + var(--i) * 14px);
   display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);
@@ -311,7 +313,7 @@ h1,h2,h3,p{margin:0}
   .stack-card .project-story{font-size:15px}
 }
 /* short screens or reduced motion: cards simply follow each other */
-@media (max-height:620px),(prefers-reduced-motion:reduce){.stack-card{position:relative;top:auto}}
+@media (max-height:620px),(prefers-reduced-motion:reduce){.stack-card{position:relative;top:auto}.stack{margin-bottom:0}.stack::after{display:none}}
 @media (prefers-reduced-motion:reduce){.stack-img img{transition:none}}
 /* tablet mockups sit straight on the card colour, no frame */
 .stack-img.device{border-radius:0;overflow:visible;display:flex;align-items:center;justify-content:center}
