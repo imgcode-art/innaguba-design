@@ -116,6 +116,7 @@ h1,h2,h3,p{margin:0}
 .project-img img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:6px;box-shadow:0 1px 2px rgba(var(--shadow),.08),0 12px 32px -18px rgba(var(--shadow),.35);transition:transform .8s cubic-bezier(.2,.7,.2,1)}
 .project:hover .project-img img{transform:scale(1.03)}
 .project-meta{display:flex;justify-content:space-between;gap:16px;font-size:15px}
+.project-meta strong{font-weight:500;color:var(--ink)}
 .project-meta .live{display:inline-flex;align-items:center;gap:8px;font-weight:500;color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:4px}
 .project-meta .live:hover{text-decoration-color:currentColor}
 .project-meta span{color:var(--mute);text-align:right}
@@ -126,6 +127,12 @@ h1,h2,h3,p{margin:0}
 /* Tablet mockups (her own mockup with the live sites on screen) */
 .project-img.tablet{padding:0;border:0;background:none;border-radius:16px}
 .project-img.tablet img{aspect-ratio:4/3;object-fit:cover;border-radius:16px;box-shadow:none}
+
+/* A full-width project card (the brand shoot) under the two website cards */
+.project-wide{grid-column:1/-1}
+.project-wide .project-img{padding:0;border:0;background:none}
+.project-wide .project-img img{aspect-ratio:21/9;object-fit:cover;object-position:center 60%;border-radius:16px;box-shadow:none}
+.project-wide .project-story{max-width:760px}
 
 /* Photography strip */
 .photo-strip{padding:clamp(64px,9vw,104px) 0;border-bottom:1px solid var(--line)}

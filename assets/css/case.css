@@ -101,3 +101,9 @@
 
 /* three phone screens side by side: same height, cropped from the top */
 .phones-even img{aspect-ratio:600/929;object-fit:cover;object-position:top}
+
+/* two photos of different orientation side by side: same height */
+.fig-grid.match img{height:clamp(320px,38vw,560px);object-fit:cover}
+.wide-cover{margin-top:clamp(48px,6vw,72px)}
+.wide-cover img{border:0;border-radius:20px}
+@media (max-width:900px){.fig-grid.match img{height:auto}}
