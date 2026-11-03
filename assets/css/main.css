@@ -281,15 +281,16 @@ h1,h2,h3,p{margin:0}
   border-radius:24px;background:var(--bg);color:var(--txt);
   box-shadow:0 -1px 0 rgba(255,255,255,.4) inset,0 -18px 40px -28px rgba(var(--shadow),.35);
   transform-origin:50% 0;will-change:transform}
-.stack-card.tone-sand{--bg:#D8C8B0}
-.stack-card.tone-sage{--bg:#DCE4D6}
-.stack-card.tone-clay{--bg:#EBDDCF}
-.stack-card.tone-night{--bg:var(--night);--fg:var(--cream);--txt:var(--night-text);--sub:var(--night-mute)}
+.stack-card{--acc:#405530}
+.stack-card.tone-lavender{--bg:#C1C5E1}
+.stack-card.tone-sage{--bg:#C0CEBB}
+.stack-card.tone-blue{--bg:#809EBB;--acc:#1F2E45;--sub:#2E3B48}
+.stack-card.tone-forest{--bg:#405530;--fg:#F0EFEC;--txt:#DCE3D3;--sub:#B7C4AC;--acc:#E9AAD6}
+.stack-card{--sub:rgba(27,31,28,.62)} /* labels on the light cards */
 .stack-text{display:flex;flex-direction:column;gap:18px;padding:clamp(4px,1.4vw,16px) 0 clamp(4px,1.4vw,16px) clamp(4px,1.4vw,16px);min-height:0}
 .stack-kind{margin:0;font-size:14px;color:var(--sub)}
 .stack-title{margin:0;font-family:var(--serif);font-weight:300;font-size:clamp(30px,3.4vw,48px);line-height:1.08;letter-spacing:-.01em;color:var(--fg)}
-.stack-title em{font-style:italic;color:var(--walnut)}
-.tone-night .stack-title em{color:var(--gold)}
+.stack-title em{font-style:italic;color:var(--acc)}
 .stack-card .project-story{margin:0;color:var(--txt)}
 .stack-card .project-story em{color:var(--sub)}
 .stack-links{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:baseline;margin-top:auto}
