@@ -30,7 +30,7 @@ if (/[?&]theme=warm\b/.test(location.search)) document.documentElement.setAttrib
   items.forEach(function (el) { io.observe(el); });
 })();
 
-// Headline: the last word slowly changes (properly, with care, with heart, honestly).
+// Headline: the last word slowly changes (properly, with care, honestly).
 // Skipped for people who prefer reduced motion; screen readers get the full sentence from aria-label.
 (function () {
   var el = document.querySelector('.rotator');
