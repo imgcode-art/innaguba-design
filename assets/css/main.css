@@ -117,6 +117,8 @@ h1,h2,h3,p{margin:0}
 
 /* Rotating last word of the headline. Reserve the tallest variant's lines so nothing below jumps. */
 .hero h1:lang(de){min-height:3.06em}
+/* the German headline runs a line longer, so the seal sits in its middle instead of at the bottom */
+.hero-title:lang(de) .seal{align-self:center}
 .rotator{display:inline-block;transition:opacity .45s ease,transform .45s cubic-bezier(.2,.7,.2,1)}
 .rotator.is-out{opacity:0;transform:translateY(.25em)}
 
