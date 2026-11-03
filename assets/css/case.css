@@ -139,3 +139,5 @@
 /* Photos and screenshots stand on their own: no coloured frame, border or box around them */
 .figure img,.figure video{border:0;background:none}
 .cs-cover{padding:0;background:none;border:0}
+/* two screenshots side by side at the same height */
+.fig-grid.same img{aspect-ratio:1.9;object-fit:cover;object-position:center top}
