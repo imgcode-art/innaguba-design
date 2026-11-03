@@ -132,3 +132,11 @@
 .founder .prose{margin-top:clamp(32px,4vw,48px)}
 @media (max-width:900px){.founder{grid-template-columns:1fr}.founder .figure{max-width:420px}}
 .founder .prose p:first-child{font-family:var(--serif);font-weight:400;font-size:clamp(25px,2.2vw,31px);line-height:1.4;color:var(--ink)}
+
+/* Each case study wears the colour of its card on the homepage instead of the pale grey-green */
+.case-innaguba{--frame:#C1C5E1;--frame-line:#A9AED3}
+.case-topenivcajku{--frame:#F2D5BC;--frame-line:#E2BC9C}
+.case-topenivcajku .cs.night{background:#405530}
+.case-topenivcajku .cs.night .ed{color:#F2A462}
+.case-herb-farm{--frame:#C0CEBB;--frame-line:#A7B8A1}
+.case-loukal{--frame:#B9CADB;--frame-line:#9CB3C8}
