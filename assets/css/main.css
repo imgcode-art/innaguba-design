@@ -182,12 +182,27 @@ h1,h2,h3,p{margin:0}
 .band-night .kicker{font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--night-mute)}
 .band-night .lead{margin-top:20px;font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(38px,5vw,63px);line-height:1.15}
 .band-night .lead span{color:var(--gold)}
-.steps{list-style:none;margin:56px 0 0;padding:0;display:flex;flex-direction:column;gap:40px;align-items:center}
-.step{display:flex;flex-direction:column;align-items:center;gap:10px}
-.step-title{font-family:var(--serif);font-weight:300;font-size:clamp(45px,6vw,72px);line-height:1.05}
-.step-text{max-width:520px;font-size:15px;line-height:1.6}
-.step-title{color:var(--cream)}
-.step-text{color:var(--night-text)}
+.steps{list-style:none;margin:clamp(56px,7vw,88px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));text-align:left;counter-reset:step}
+/* each step hangs from one shared line; the gold part draws itself as the step appears, the dot marks the step */
+.step{position:relative;display:flex;flex-direction:column;gap:12px;padding:36px clamp(16px,2.4vw,32px) 0 0;border-top:1px solid var(--night-line)}
+.step::before{content:"";position:absolute;left:0;top:-5px;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.step::after{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:0 50%;transition:transform 1.2s cubic-bezier(.6,.1,.2,1) .2s}
+.step.is-in::after,html:not(.js) .step::after{transform:scaleX(1)}
+.step-num{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(64px,7vw,96px);line-height:.9;color:var(--gold)}
+.step-title{margin-top:6px;font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.4vw,32px);line-height:1.1;color:var(--cream)}
+.step-text{font-size:15px;line-height:1.6;color:var(--night-text)}
+.step-get{margin-top:auto;padding-top:18px;font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.35;color:var(--cream)}
+.step-get small{display:block;margin-bottom:6px;font-family:var(--sans);font-style:normal;font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--night-mute)}
+@media (max-width:1000px){.steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:56px}}
+@media (max-width:640px){
+  .steps{grid-template-columns:1fr;row-gap:0}
+  .step{padding:0 0 44px 32px;border-top:0;border-left:1px solid var(--night-line)}
+  .step:last-child{padding-bottom:0}
+  .step::before{left:-5px;top:6px}
+  .step::after{left:-1px;right:auto;top:0;bottom:0;width:1px;height:auto;transform:scaleY(0);transform-origin:50% 0}
+  .step.is-in::after{transform:scaleY(1)}
+}
+@media (prefers-reduced-motion:reduce){.step::after{transition:none;transform:none}}
 
 /* Reviews */
 .quote{font-family:var(--serif);font-weight:400;font-size:25px;line-height:1.45;color:var(--ink)}
@@ -257,7 +272,6 @@ h1,h2,h3,p{margin:0}
   .about-photo{justify-self:center;margin:0 auto}
   .contact-lines{display:flex;flex-direction:column;gap:6px}
   .contact-lines .sep{display:none}
-  .step-title{font-size:38px}
   .seal{width:120px;justify-self:center;margin:0}
   .seal-ring text{font-size:14px}
   /* phone header: logo centred, menu button on the right, links open as a full-screen panel */
