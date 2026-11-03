@@ -93,7 +93,7 @@ h1,h2,h3,p{margin:0}
 .hero-foot{display:flex;justify-content:space-between;align-items:last baseline;gap:32px;margin-top:56px}
 .hero-foot p{max-width:600px}
 /* same box as the seal above, so the link sits centred under the heart */
-.hero-cta{width:180px;margin-right:-11px;text-align:center}
+.hero-cta{width:180px;margin-right:-11px;text-align:center;position:relative;top:-14px}
 
 .hero-title{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end}
 .seal{position:relative;width:180px;aspect-ratio:1;color:var(--ink);margin-bottom:-8px;margin-right:-11px}
@@ -260,7 +260,7 @@ h1,h2,h3,p{margin:0}
   .site-head nav .lang{padding-left:0;border-left:0;font-family:var(--sans);font-size:15px;letter-spacing:.12em;margin-top:12px}
   .hero-foot{flex-direction:column;align-items:flex-start}
   .hero h1:lang(de){min-height:4.08em}
-  .hero-cta{width:auto;margin-right:0;text-align:left}
+  .hero-cta{width:auto;margin-right:0;text-align:left;top:0}
   .project-meta{flex-direction:column;gap:2px}
   .project-meta span{text-align:left}
   .foot-bar{flex-direction:column}
