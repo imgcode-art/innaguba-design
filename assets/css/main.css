@@ -67,8 +67,8 @@ h1,h2,h3,p{margin:0}
 .site-head{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--ink);background:var(--head-bg);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px)}
 .site-head .wrap{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding-top:24px;padding-bottom:20px;font-size:14px}
 /* Wordmark matches the innaguba.com header logo exactly (Jost 400, 18px, 0.1em caps); "Design" carries the accent */
-.site-head .name{font-family:var(--sans);font-weight:400;font-size:18px;line-height:1;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:#111}
-.site-head .name span{color:var(--logo-accent)}
+.site-head .name{font-family:var(--sans);font-weight:300;font-size:18px;line-height:1;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:#111}
+.site-head .name span{color:var(--logo-accent);font-weight:500}
 .site-head nav{display:flex;gap:clamp(18px,3vw,36px)}
 .site-head nav a{text-decoration:none}
 
