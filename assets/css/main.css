@@ -307,3 +307,8 @@ h1,h2,h3,p{margin:0}
 /* short screens or reduced motion: cards simply follow each other */
 @media (max-height:620px),(prefers-reduced-motion:reduce){.stack-card{position:relative;top:auto}}
 @media (prefers-reduced-motion:reduce){.stack-img img{transition:none}}
+/* tablet mockups sit straight on the card colour, no frame */
+.stack-img.device{border-radius:0;overflow:visible;display:flex;align-items:center;justify-content:center}
+.stack-img.device img{object-fit:contain;max-height:100%}
+.stack-card:hover .stack-img.device img{transform:scale(1.02)}
+@media (max-width:900px){.stack-img.device{aspect-ratio:auto}.stack-img.device img{height:auto}}
