@@ -201,7 +201,8 @@ h1,h2,h3,p{margin:0}
 .reviews-foot{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);font-size:14px}
 .reviews-foot a{color:var(--walnut)}
 
-.reviews-label{text-align:center}
+/* same small spaced capitals as the PROCESS label */
+.reviews-label{text-align:center;font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
 .quote-big{max-width:980px;margin:28px auto 0;text-align:center}
 .quote-big blockquote{margin:0;font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.4vw,60px);line-height:1.18;color:var(--ink)}
 .quote-big .quote-by{margin-top:22px}
