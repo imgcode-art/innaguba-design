@@ -129,3 +129,9 @@
 
 /* video clips sit in the same frames as photos */
 .figure video{display:block;width:100%;height:auto;border-radius:10px;background:var(--frame)}
+
+/* founder portrait beside a short story */
+.founder{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,72px);align-items:center}
+.founder .prose{margin-top:clamp(32px,4vw,48px)}
+@media (max-width:900px){.founder{grid-template-columns:1fr}.founder .figure{max-width:420px}}
+.founder .prose p:first-child{font-family:var(--serif);font-weight:300;font-size:clamp(22px,2.2vw,28px);line-height:1.4;color:var(--ink)}
