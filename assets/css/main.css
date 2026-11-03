@@ -159,7 +159,9 @@ h1,h2,h3,p{margin:0}
 .about-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;align-items:start}
 .about-photo{width:240px;height:240px;border-radius:50%;object-fit:cover}
 .about-text{grid-column:span 2;display:flex;flex-direction:column;gap:18px}
-.about-text a:not(.line-link){color:var(--walnut);text-underline-offset:3px}
+/* link in running text: same colour as the text, only a faint underline that darkens on hover */
+.about-text a:not(.line-link){color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-decoration-thickness:1px;text-underline-offset:4px;transition:text-decoration-color .2s ease}
+.about-text a:not(.line-link):hover{text-decoration-color:currentColor}
 .about-lead{font-family:var(--serif);font-weight:400;font-size:34px;line-height:1.3;color:var(--ink)}
 .facts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:10px 32px;margin:12px 0 0;padding-top:20px;border-top:1px solid var(--line);font-size:14px}
 .facts dt{color:var(--mute)}
