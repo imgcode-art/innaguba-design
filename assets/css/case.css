@@ -134,7 +134,7 @@
 .founder .prose p:first-child{font-family:var(--serif);font-weight:400;font-size:clamp(25px,2.2vw,31px);line-height:1.4;color:var(--ink)}
 
 /* Text cards in every case study: one soft grey */
-.case-innaguba,.case-topenivcajku,.case-herb-farm,.case-loukal{--frame:#E3E2DF;--frame-line:#D3D1CD}
+.case-innaguba,.case-topenivcajku,.case-herb-farm,.case-loukal,.case-oksamit{--frame:#E3E2DF;--frame-line:#D3D1CD}
 
 /* Photos and screenshots stand on their own: no coloured frame, border or box around them */
 .figure img,.figure video{border:0;background:none}
