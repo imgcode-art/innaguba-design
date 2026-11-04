@@ -52,10 +52,11 @@ if (/[?&]theme=warm\b/.test(location.search)) document.documentElement.setAttrib
   var btn = document.querySelector('.menu-btn');
   if (!btn) return;
   var root = document.documentElement;
+  var labels = { de: ['Menü öffnen', 'Menü schließen'], cs: ['Otevřít menu', 'Zavřít menu'] }[root.lang.slice(0, 2)] || ['Open menu', 'Close menu'];
   function set(open) {
     root.classList.toggle('menu-open', open);
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    btn.setAttribute('aria-label', open ? labels[1] : labels[0]);
   }
   btn.addEventListener('click', function () { set(!root.classList.contains('menu-open')); });
   document.querySelectorAll('#site-nav a').forEach(function (a) { a.addEventListener('click', function () { set(false); }); });

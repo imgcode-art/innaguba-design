@@ -5,6 +5,7 @@
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://design.innaguba.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://design.innaguba.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://design.innaguba.com/cs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://design.innaguba.com/"/>
   </url>
   <url>
@@ -12,6 +13,15 @@
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://design.innaguba.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://design.innaguba.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://design.innaguba.com/cs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://design.innaguba.com/"/>
+  </url>
+  <url>
+    <loc>https://design.innaguba.com/cs/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://design.innaguba.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://design.innaguba.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://design.innaguba.com/cs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://design.innaguba.com/"/>
   </url>
   <url><loc>https://design.innaguba.com/work/innaguba.html</loc><lastmod>2026-11-03</lastmod></url>
