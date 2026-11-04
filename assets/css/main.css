@@ -313,6 +313,7 @@ h1,h2,h3,p{margin:0}
 .stack-card{--acc:#405530}
 .stack-card.tone-lavender{--bg:#C1C5E1}
 .stack-card.tone-sage{--bg:#C0CEBB;--acc:#5F63A3} /* violet of the first card, deep enough to read */
+.stack-card.tone-ivory{--bg:#E9DFD6;--acc:#4A0E1C}
 .stack-card.tone-blue{--bg:#809EBB;--acc:#1F2E45;--sub:#2E3B48}
 .stack-card.tone-forest{--bg:#405530;--fg:#F0EFEC;--txt:#DCE3D3;--sub:#B7C4AC;--acc:#F2A462}
 .stack-card{--sub:rgba(27,31,28,.62)} /* labels on the light cards */
