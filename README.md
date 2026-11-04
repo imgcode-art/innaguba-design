@@ -11,7 +11,7 @@ privacy.html            GDPR privacy policy
 assets/css/main.css     all shared styles (palette tokens at the top; ?theme=warm previews the old walnut palette)
 assets/css/case.css     case-study blocks
 assets/js/main.js       scroll reveal, header-height anchor offset
-assets/fonts/           Newsreader, Inter, Jost, Cormorant Garamond (woff2)
+assets/fonts/           Jost, Cormorant Garamond, Tenor Sans + Hanken Grotesk (Oksamit case) (woff2)
 cv/                     one-page CV (PDF)
 ```
 
