@@ -307,13 +307,13 @@ h1,h2,h3,p{margin:0}
   border-radius:24px;background:var(--bg);color:var(--txt);
   box-shadow:0 -1px 0 rgba(255,255,255,.4) inset,0 -18px 40px -28px rgba(var(--shadow),.35);
   transform-origin:50% 0;will-change:transform}
-.stack-card{--acc:#405530}
+.stack-card{--acc:var(--walnut)}
 /* each card wears its client's own colours; the site itself stays green */
 .stack-card.tone-cream{--bg:#EDE6DA;--acc:#59462D} /* innaguba.com: cream paper, walnut */
 .stack-card.tone-sage{--bg:#C0CEBB;--acc:#9A4706} /* kvetinovafarma.com orange, deepened to read on sage */
 .stack-card.tone-ivory{--bg:#E9DFD6;--acc:#4A0E1C}
 .stack-card.tone-teal{--bg:#11373E;--fg:#F0EFEC;--txt:#D3DEDC;--sub:#A6BDBB;--acc:#A9BFAB} /* Loukal logo teal, their sage */
-.stack-card.tone-forest{--bg:#405530;--fg:#F0EFEC;--txt:#DCE3D3;--sub:#B7C4AC;--acc:#F2A462}
+.stack-card.tone-night{--bg:var(--night);--fg:var(--cream);--txt:var(--night-text);--sub:var(--night-mute);--acc:#F2A462} /* topenivcajku.com: dark site, orange; same dark as the footer */
 .stack-card{--sub:rgba(27,31,28,.74)} /* labels on the light cards, 5:1 at 14px */
 .stack-text{display:flex;flex-direction:column;gap:18px;padding:clamp(4px,1.4vw,16px) 0 clamp(4px,1.4vw,16px) clamp(4px,1.4vw,16px);min-height:0}
 .stack-kind{margin:0;font-size:14px;color:var(--sub)}
