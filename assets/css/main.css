@@ -365,7 +365,7 @@ h1,h2,h3,p{margin:0}
 /* studio photo in the Process band: where the first conversation happens */
 .process-photo{max-width:380px;margin:clamp(32px,4vw,44px) auto 0}
 .process-photo img{width:100%;border-radius:16px}
-.process-photo figcaption{margin-top:14px;font-size:14px;color:var(--night-mute)}
+.process-photo figcaption{margin-top:14px;font-size:14px;color:var(--night-mute);text-wrap:balance}
 /* photo cards take exactly the footprint of the tablet body in the mockups (1188 x 906 of the 1260 x 984 image,
    sitting a little above its centre), rounded, with a soft shadow */
 .stack-img.device.photo img{width:94.3%;height:auto;max-height:none;aspect-ratio:1188/906;object-fit:cover;border-radius:22px;margin-bottom:3.8%;box-shadow:0 26px 40px -26px rgba(0,0,0,.5)}
