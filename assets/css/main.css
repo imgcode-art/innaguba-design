@@ -373,3 +373,22 @@ h1,h2,h3,p{margin:0}
 /* Process: the step being read is lit, the others wait in half light */
 #process .steps.is-focus .step{opacity:.3;transition:opacity .6s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
 #process .steps.is-focus .step.is-active{opacity:1}
+
+/* Questions: one column of questions that open on click */
+.faq{border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item summary{position:relative;display:block;padding:22px 48px 22px 0;cursor:pointer;list-style:none;font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.2vw,29px);line-height:1.25;color:var(--ink);transition:color .2s ease}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:hover{color:var(--walnut)}
+.faq-item summary:focus-visible{outline:2px solid var(--walnut);outline-offset:4px}
+.faq-item summary::before,.faq-item summary::after{content:"";position:absolute;right:8px;top:50%;width:16px;height:1px;background:currentColor;transition:transform .3s ease}
+.faq-item summary::after{transform:rotate(90deg)}
+.faq-item[open] summary::before{transform:rotate(45deg)}
+.faq-item[open] summary::after{transform:rotate(135deg)}
+.faq-item p{margin:0;max-width:620px;padding:0 48px 26px 0}
+/* smooth opening where the browser supports it; elsewhere it simply opens */
+@supports (interpolate-size:allow-keywords){
+  .faq{interpolate-size:allow-keywords}
+  .faq-item::details-content{height:0;overflow:hidden;transition:height .35s ease,content-visibility .35s allow-discrete}
+  .faq-item[open]::details-content{height:auto}
+}
