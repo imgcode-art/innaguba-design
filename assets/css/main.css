@@ -264,7 +264,9 @@ h1,h2,h3,p{margin:0}
   .about-photo{justify-self:center;margin:0 auto}
   .contact-lines{display:flex;flex-direction:column;gap:6px}
   .contact-lines .sep{display:none}
-  .seal{width:120px;justify-self:center;margin:0}
+  .seal{width:160px;justify-self:center;margin:0}
+  .hero{padding-top:44px}
+  .hero p.label{font-size:15px}
   .seal-ring text{font-size:14px}
   /* phone header: logo centred, menu button on the right, links open as a full-screen panel */
   /* no backdrop blur here: it would make the fixed menu panel position itself inside the header */
