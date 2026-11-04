@@ -164,3 +164,29 @@
   .ok-sw{min-height:96px}
   .ok-type{grid-template-columns:1fr}
 }
+
+/* Není úklid jako úklid: the concept's own palette and type */
+@font-face{font-family:'Space Grotesk';src:url(../fonts/space-grotesk-latin.woff2) format('woff2');font-weight:300 700;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Space Grotesk';src:url(../fonts/space-grotesk-latin-ext.woff2) format('woff2');font-weight:300 700;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Inter';src:url(../fonts/inter-latin.woff2) format('woff2');font-weight:100 900;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Inter';src:url(../fonts/inter-latin-ext.woff2) format('woff2');font-weight:100 900;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+.case-neniuklid{--frame:#E3E2DF;--frame-line:#D3D1CD}
+.nu-note{margin-top:clamp(56px,7vw,96px);font-size:14px;color:var(--mute)}
+.nu-before{grid-template-columns:minmax(0,3.2fr) minmax(0,1fr)}
+.nu-palette{display:flex;margin-top:clamp(40px,5vw,64px);border-radius:16px;overflow:hidden;border:1px solid var(--frame-line);min-height:clamp(200px,22vw,300px)}
+.nu-sw{display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:clamp(14px,1.6vw,22px);background:var(--c);color:var(--t);min-width:0}
+.nu-sw b{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(15px,1.3vw,19px);line-height:1.15}
+.nu-sw code{font-size:12px;opacity:.75}
+.nu-sw span{font-size:13px;opacity:.85}
+.nu-small{margin-top:14px;max-width:720px;font-size:15px;color:var(--mute)}
+.nu-type{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(32px,5vw,72px);align-items:end;margin-top:clamp(56px,7vw,96px);padding-top:clamp(28px,3vw,40px);border-top:1px solid var(--line)}
+.nu-type b{font-weight:500;color:var(--ink)}
+.nu-g{margin:0 0 14px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(46px,6.4vw,96px);line-height:.9;letter-spacing:-.045em;color:#111}
+.nu-g i{display:inline-block;width:.2em;height:.2em;margin-left:.04em;background:#D3E34C}
+.nu-i{margin:0 0 14px;font-family:'Inter',sans-serif;font-size:clamp(20px,1.8vw,26px);line-height:1.35;color:#111}
+@media (max-width:900px){
+  .nu-before{grid-template-columns:1fr}
+  .nu-palette{flex-direction:column;min-height:0}
+  .nu-sw{flex:none!important;min-height:76px}
+  .nu-type{grid-template-columns:1fr}
+}

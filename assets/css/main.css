@@ -317,6 +317,7 @@ h1,h2,h3,p{margin:0}
 .stack-card.tone-teal{--bg:#11373E;--fg:#F0EFEC;--txt:#D3DEDC;--sub:#A6BDBB;--acc:#A9BFAB} /* Loukal logo teal, their sage */
 .stack-card.tone-concrete{--bg:#DAD6D0;--acc:#A34B12} /* topenivcajku.com orange on warm grey, so their dark site stands out */
 .stack-card{--sub:rgba(27,31,28,.74)} /* labels on the light cards, 5:1 at 14px */
+.stack-card.tone-ink{--bg:#111111;--fg:#F4F3EF;--txt:#DEDED9;--sub:#A8A8A3;--acc:#D3E34C} /* Není úklid concept: black and acid lime */
 .stack-text{display:flex;flex-direction:column;gap:18px;padding:clamp(4px,1.4vw,16px) 0 clamp(4px,1.4vw,16px) clamp(4px,1.4vw,16px);min-height:0}
 .stack-kind{margin:0;font-size:14px;color:var(--sub)}
 .stack-title{margin:0;font-family:var(--serif);font-weight:300;font-size:clamp(34px,3.4vw,54px);line-height:1.08;letter-spacing:-.01em;color:var(--fg)}
