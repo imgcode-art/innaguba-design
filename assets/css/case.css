@@ -155,18 +155,9 @@
 .ok-sw span{font-size:14px;opacity:.85}
 .ok-ratio{display:flex;height:12px;margin-top:20px;border-radius:6px;overflow:hidden;border:1px solid #D9CFC0}
 .ok-note{margin-top:12px;font-size:14px;color:var(--mute)}
-.ok-type{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,96px);margin-top:clamp(64px,8vw,112px);align-items:end}
-.ok-aa{font-family:'Tenor Sans',sans-serif;font-size:clamp(120px,16vw,220px);line-height:.9;color:#4A0E1C;margin:0}
-.ok-aa-b{font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:clamp(80px,9vw,128px);color:#1C1A19}
-.ok-name{font-family:'Tenor Sans',sans-serif;font-size:clamp(26px,2.6vw,36px);color:var(--ink);margin-top:18px}
-.ok-type .ok-aa-b+.ok-name{font-family:'Hanken Grotesk',sans-serif;font-weight:500}
-.ok-spaced{font-family:'Tenor Sans',sans-serif;font-size:clamp(18px,2vw,26px);letter-spacing:.22em;color:#4A0E1C;margin-top:28px}
-.ok-alpha{font-family:'Tenor Sans',sans-serif;font-size:clamp(14px,1.3vw,18px);letter-spacing:.08em;line-height:1.7;color:var(--mute);margin-top:14px}
-.ok-tag{margin-top:28px;padding:24px 26px;background:#FBF8F3;border:1px solid #E4DCCF;border-radius:4px;box-shadow:0 18px 30px -22px rgba(74,14,28,.35);font-family:'Hanken Grotesk',sans-serif;max-width:340px;transform:rotate(-2deg)}
-.ok-tag-title{font-family:'Tenor Sans',sans-serif;font-size:26px;color:#4A0E1C;margin:0 0 12px}
-.ok-tag dl{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin:0;font-size:14px;color:#1C1A19}
-.ok-tag dt{color:#7D8B74}
-.ok-tag dd{margin:0}
+.ok-type{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);margin-top:clamp(56px,7vw,96px);padding-top:clamp(28px,3vw,40px);border-top:1px solid #D9CFC0}
+.ok-name{font-family:'Tenor Sans',sans-serif;font-size:clamp(36px,4.4vw,60px);line-height:1.1;color:#4A0E1C;margin:0 0 10px}
+.ok-name-b{font-family:'Hanken Grotesk',sans-serif;font-weight:500;color:#1C1A19}
 @media (max-width:900px){
   .ok-palette{flex-direction:column;min-height:0}
   .ok-sw{min-height:96px}
