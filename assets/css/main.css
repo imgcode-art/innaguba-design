@@ -292,6 +292,8 @@ h1,h2,h3,p{margin:0}
   .facts{grid-template-columns:1fr 2fr}
 }
 @media (max-width:640px){.br-desk{display:none}}
+/* Cormorant at 300 gets too thin below ~40px: on phones the serif headings drop under that, so they go to 400 */
+@media (max-width:640px){.h2,.stack-title,.quote-big blockquote,.contact-mail,.site-foot .slogan{font-weight:400}}
 
 /* project cards: link names never break, "Read the case study" lines up at the bottom of each row */
 .project-meta .live{white-space:nowrap}

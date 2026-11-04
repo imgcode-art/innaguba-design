@@ -41,7 +41,7 @@
 
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:32px}
 .stat{padding-top:18px;border-top:1px solid var(--line)}
-.stat b{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(31px,3vw,47px);line-height:1;white-space:nowrap;color:var(--ink)}
+.stat b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(31px,3vw,47px);line-height:1;white-space:nowrap;color:var(--ink)}
 .stat.accent b{color:var(--walnut)}
 .stat span{display:block;margin-top:10px;font-size:15px}
 
@@ -86,6 +86,7 @@
   .cs-cover .phone{width:26%}
 }
 @media (max-width:640px){
+  .cs h2{font-weight:400}
   .cs-meta{grid-template-columns:1fr}
   .cards[style]{grid-template-columns:1fr!important}
 }
