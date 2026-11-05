@@ -218,3 +218,5 @@
 .us-g{margin:0 0 14px;font-family:'Archivo',sans-serif;font-weight:800;font-stretch:125%;font-size:clamp(40px,5.6vw,84px);line-height:.92;letter-spacing:-.035em;text-transform:uppercase;color:#111}
 .us-m{margin:0 0 14px;font-family:'JetBrains Mono',monospace;font-size:clamp(14px,1.2vw,17px);line-height:1.6;letter-spacing:.05em;color:#111}
 .us-mark{display:inline-block;width:.8em;height:.8em;margin-right:.22em;vertical-align:-.06em;background:url(../img/usta/mark.svg) center/contain no-repeat}
+
+.case-usta .ba-line,.case-usta .ba-line::after,.case-usta .ba-tag--after{background:#FF5A1F}
