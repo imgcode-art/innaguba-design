@@ -217,4 +217,4 @@
 .us-sw b{font-family:'Archivo',sans-serif;font-weight:800;font-stretch:125%;letter-spacing:-.01em}
 .us-g{margin:0 0 14px;font-family:'Archivo',sans-serif;font-weight:800;font-stretch:125%;font-size:clamp(40px,5.6vw,84px);line-height:.92;letter-spacing:-.035em;text-transform:uppercase;color:#111}
 .us-m{margin:0 0 14px;font-family:'JetBrains Mono',monospace;font-size:clamp(14px,1.2vw,17px);line-height:1.6;letter-spacing:.05em;color:#111}
-.us-mark{display:inline-block;width:.62em;height:.62em;margin-right:.18em;vertical-align:.02em;background:linear-gradient(180deg,#FFE066,#FF7A1A 32%,#E8302A 60%,#5B1470 85%,#1A0A2E)}
+.us-mark{display:inline-block;width:.8em;height:.8em;margin-right:.22em;vertical-align:-.06em;background:url(../img/usta/mark.svg) center/contain no-repeat}

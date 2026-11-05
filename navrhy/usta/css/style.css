@@ -411,7 +411,11 @@ a:hover { color: #5A5955; }
 
 /* ---------- KONTAKT ---------- */
 .kontakt { padding: clamp(48px, 5.5vw, 80px) var(--gutter) var(--section-y); display: flex; flex-direction: column; gap: 48px; }
-@media (min-width: 721px) { .kontakt { min-height: calc(100vh - 81px); min-height: calc(100svh - 81px); box-sizing: border-box; } }
+@media (min-width: 721px) {
+  .page-end { display: flex; flex-direction: column; min-height: calc(100vh - 81px); min-height: calc(100svh - 81px); }
+  .page-end .site-footer { flex: 1; }
+  .page-end .footer-bottom { margin-top: auto; }
+}
 .kontakt > div:first-child { display: flex; flex-direction: column; gap: 24px; }
 .kontakt h2 { font-size: min(4.2rem, max(4.4vw, min(2.2rem, 9.5vw))); line-height: .95; letter-spacing: -.04em; }
 .phones { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
