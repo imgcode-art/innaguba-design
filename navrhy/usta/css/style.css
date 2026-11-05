@@ -55,7 +55,7 @@ a:hover { color: #5A5955; }
   letter-spacing: -.035em;
 }
 .h-l { font-size: clamp(2rem, 3.3vw, 3.2rem); line-height: .98; }
-.lead { margin: 0; max-width: 520px; font-size: 18px; line-height: 1.5; color: var(--ink-2); }
+.lead { margin: 0; max-width: 520px; font-size: 18px; line-height: 1.5; color: var(--ink-2); text-wrap: pretty; }
 .dk .lead { color: var(--fog-2); }
 
 .arrow-link {
@@ -241,14 +241,14 @@ a:hover { color: #5A5955; }
 }
 
 /* ---------- NUMBERS ---------- */
-.stats { background: var(--night); color: var(--fog); display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-.stat { padding: 40px var(--gutter); border-right: 1px solid var(--rule-dark); display: flex; flex-direction: column; gap: 14px; container-type: inline-size; }
+.stats { background: var(--paper); color: var(--ink); border-bottom: 1px solid var(--ink); display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.stat { padding: 40px var(--gutter); border-right: 1px solid var(--ink); display: flex; flex-direction: column; gap: 14px; container-type: inline-size; }
 .stat:last-child { border-right: 0; }
-.stat .label { color: var(--fog-3); }
+.stat .label { color: var(--ink-3); }
 .stat b { font-weight: 800; font-size: clamp(44px, calc((100cqw - 2 * var(--gutter)) / 3.4), 72px); line-height: .9; letter-spacing: -.04em; white-space: nowrap; font-variant-numeric: tabular-nums; }
-.stat span:last-child { font-size: 16px; line-height: 1.4; color: var(--fog-2); }
+.stat span:last-child { font-size: 16px; line-height: 1.4; color: var(--ink-2); }
 @media (max-width: 539px) {
-  .stat { border-right: 0; border-bottom: 1px solid var(--rule-dark); }
+  .stat { border-right: 0; border-bottom: 1px solid var(--rule-light); }
   .stat:last-child { border-bottom: 0; }
 }
 
@@ -404,13 +404,8 @@ a:hover { color: #5A5955; }
 .portrait figcaption { position: absolute; left: 28px; top: 60px; font-family: var(--mono); font-size: 12px; letter-spacing: .05em; color: var(--fog-2); line-height: 1.6; }
 @media (max-width: 720px) { .portrait { min-height: 0; padding-top: 96px; } }
 .onas-copy { flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 36px; }
-.person-call { align-self: flex-start; display: flex; align-items: center; gap: 16px; padding: 16px 24px 16px 20px; background: var(--ink); color: var(--fog); text-decoration: none; transition: background-color .2s; }
-.person-call:hover { background: #2A2926; }
-.person-call svg { flex: none; color: var(--accent); }
-.person-call span { display: flex; flex-direction: column; gap: 4px; }
-.person-call small { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; color: var(--fog-3); }
-.person-call b { font-weight: 700; font-size: 22px; letter-spacing: -.01em; line-height: 1; }
-@media (max-width: 480px) { .person-call { align-self: stretch; } }
+.onas-copy .lead { max-width: 29em; text-wrap: balance; }
+.onas-copy .lead + .lead { margin-top: -20px; }
 .onas h2 { font-size: clamp(2.2rem, 4vw, 3.8rem); }
 .onas .lead { max-width: 560px; line-height: 1.55; }
 
