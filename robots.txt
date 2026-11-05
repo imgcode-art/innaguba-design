@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /cv/
+Disallow: /navrhy/
 
 # AI assistants and answer engines are welcome to read and cite this site
 User-agent: GPTBot

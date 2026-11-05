@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 -87 1040 1040">
+<circle cx="600" cy="433" r="520" fill="#FFFFFF"/>
+<style>.u{fill:#0B0B0E;stroke:#0B0B0E}.s{fill:#FF5A1F;stroke:#FF5A1F}</style>
+<defs>
+<clipPath id="o"><circle cx="600" cy="433" r="371"/></clipPath>
+<clipPath id="l"><polygon points="580,433 -239,-112 -239,1500 580,1500"/></clipPath>
+<clipPath id="tr"><rect x="625" y="0" width="500" height="338"/></clipPath>
+<clipPath id="br"><polygon points="625,295 1100,570 1100,1000 625,1000"/></clipPath>
+</defs>
+<g clip-path="url(#o)">
+<g class="u"><circle cx="600" cy="433" r="338" style="fill:none" stroke-width="66" clip-path="url(#l)"/><rect x="514" y="0" width="66" height="900"/></g>
+<g class="s"><circle cx="600" cy="433" r="338" style="fill:none" stroke-width="66" clip-path="url(#tr)"/><circle cx="600" cy="433" r="338" style="fill:none" stroke-width="66" clip-path="url(#br)"/><rect x="625" y="0" width="66" height="371"/><rect x="625" y="528" width="66" height="400"/><polygon points="625,295 1100,570 1100,646 625,371"/></g>
+</g>
+</svg>
