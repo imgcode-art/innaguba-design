@@ -410,7 +410,7 @@ a:hover { color: #5A5955; }
 .onas .lead { max-width: 560px; line-height: 1.55; }
 
 /* ---------- KONTAKT ---------- */
-.kontakt { padding: var(--section-y) var(--gutter); display: flex; flex-direction: column; gap: 48px; }
+.kontakt { padding: clamp(40px, 4.5vw, 64px) var(--gutter) var(--section-y); display: flex; flex-direction: column; gap: 48px; }
 @media (min-width: 721px) { .kontakt { min-height: calc(100vh - 81px); min-height: calc(100svh - 81px); box-sizing: border-box; } }
 .kontakt > div:first-child { display: flex; flex-direction: column; gap: 24px; }
 .kontakt h2 { font-size: min(4.2rem, max(4.4vw, min(2.2rem, 9.5vw))); line-height: .95; letter-spacing: -.04em; }
