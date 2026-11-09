@@ -314,6 +314,7 @@ h1,h2,h3,p{margin:0}
 .stack-card.tone-walnut{--bg:#6B5539;--fg:#F4EEE4;--txt:#E6DCCD;--sub:#CDBFA9;--acc:#E8C9A0} /* innaguba.com walnut, the strongest card goes first */
 .stack-card.tone-sage{--bg:#C0CEBB;--acc:#9A4706} /* kvetinovafarma.com orange, deepened to read on sage */
 .stack-card.tone-ivory{--bg:#E9DFD6;--acc:#4A0E1C}
+.stack-card.tone-clinic{--bg:#E2E6E8;--acc:#930637} /* Supreme Dental: cool surgery white-grey, their raspberry logo colour */
 .stack-card.tone-teal{--bg:#11373E;--fg:#F0EFEC;--txt:#D3DEDC;--sub:#A6BDBB;--acc:#A9BFAB} /* Loukal logo teal, their sage */
 .stack-card.tone-concrete{--bg:#DAD6D0;--acc:#A34B12} /* topenivcajku.com orange on warm grey, so their dark site stands out */
 .stack-card{--sub:rgba(27,31,28,.74)} /* labels on the light cards, 5:1 at 14px */
