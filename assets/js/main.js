@@ -107,11 +107,16 @@ if (/[?&]theme=warm\b/.test(location.search)) document.documentElement.setAttrib
   }
   // phones: cards grow with their text, so give them all the height of the tallest one;
   // otherwise a taller card underneath would peek out below a shorter one on top
+  // and on short screens lift every card by the same amount, so the bottom of each one
+  // (with its "Read more" link) still fits on screen before the next card covers it
   function equalize() {
-    cards.forEach(function (c) { c.style.minHeight = ''; });
+    cards.forEach(function (c) { c.style.minHeight = ''; c.style.top = ''; });
     if (window.innerWidth > 900) return;
     var h = Math.max.apply(null, cards.map(function (c) { return c.offsetHeight; }));
     cards.forEach(function (c) { c.style.minHeight = h + 'px'; });
+    var lastTop = parseFloat(getComputedStyle(cards[cards.length - 1]).top);
+    var shift = Math.max(0, lastTop + h + 16 - window.innerHeight);
+    if (shift) cards.forEach(function (c) { c.style.top = (parseFloat(getComputedStyle(c).top) - shift) + 'px'; });
   }
   function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
   window.addEventListener('scroll', onScroll, { passive: true });

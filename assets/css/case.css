@@ -98,7 +98,7 @@
 .cs.night .table-wrap td{border-color:var(--night-line)}
 
 /* three phone screens side by side: same height, cropped from the top */
-.phones-even img{aspect-ratio:600/929;object-fit:cover;object-position:top}
+.phones-even img,.phones-even video{aspect-ratio:600/929;object-fit:cover;object-position:top}
 
 /* two photos of different orientation side by side: same height */
 .fig-grid.match img{height:clamp(320px,38vw,560px);object-fit:cover}
